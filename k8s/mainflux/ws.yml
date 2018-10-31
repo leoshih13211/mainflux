@@ -5,7 +5,7 @@ metadata:
   labels:
     component: ws-adapter 
 spec:
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:
@@ -17,6 +17,9 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8186
+        resources:
+          requests:
+            cpu: 0
         env:
         - name: MF_THINGS_URL
           value: "things:8183"
@@ -36,4 +39,4 @@ spec:
     component: ws-adapter
   ports:
   - port: 8186
-  type: LoadBalancer
+  # type: LoadBalancer

@@ -24,7 +24,7 @@ metadata:
     component: nats
 spec:
   serviceName: nats
-  replicas: 5
+  replicas: 1
   template:
     metadata:
       labels:
@@ -44,6 +44,9 @@ spec:
           name: cluster
         - containerPort: 8222
           name: monitor
+        resources:
+          requests:
+            cpu: 0
         livenessProbe:
           httpGet:
             path: /

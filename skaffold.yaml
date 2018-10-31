@@ -1,0 +1,9 @@
+apiVersion: skaffold/v1alpha4
+kind: Config
+deploy:
+  kubectl:
+    manifests:
+    - k8s/nats/nats.yml
+    - k8s/mainflux/*.yml
+    - k8s/nginx/*.yml
+    - k8s/addons/influxdb/*.yml

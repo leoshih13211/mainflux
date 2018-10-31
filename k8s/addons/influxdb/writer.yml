@@ -48,4 +48,4 @@ spec:
     component: influxdb-writer
   ports:
   - port: 8900
-  type: LoadBalancer
+  # type: LoadBalancer

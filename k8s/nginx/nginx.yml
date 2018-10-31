@@ -40,6 +40,9 @@ spec:
         - containerPort: 80
         - containerPort: 443
         - containerPort: 8883
+        resources:
+          requests:
+            cpu: 0
         volumeMounts:
         - mountPath: /etc/ssl/certs/mainflux-server.crt
           name: secret-volume

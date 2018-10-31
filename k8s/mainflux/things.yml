@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: things
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       component: things
@@ -20,6 +20,9 @@ spec:
           name: things-http
         - containerPort: 8183
           name: things-grpc
+        resources:
+          requests:
+            cpu: 0
         env:
         - name: MF_THINGS_DB_HOST
           value: "mainflux-things-postgres"
@@ -48,4 +51,4 @@ spec:
     name: grpc
   selector:
     component: things
-  type: LoadBalancer
+  # type: LoadBalancer

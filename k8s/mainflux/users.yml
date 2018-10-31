@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: users
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       component: users
@@ -20,6 +20,9 @@ spec:
           name: users-http
         - containerPort: 8181
           name: users-grpc
+        resources:
+          requests:
+            cpu: 0
         env:
         - name: MF_USERS_DB_HOST
           value: "mainflux-users-postgres"
@@ -44,4 +47,4 @@ spec:
     name: grpc
   selector:
     component: users
-  type: LoadBalancer
+  # type: LoadBalancer

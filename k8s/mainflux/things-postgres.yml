@@ -45,6 +45,9 @@ spec:
           value: /var/lib/postgresql/data/mainflux-things-postgres-data
       ports:
         - containerPort: 5432
+      resources:
+        requests:
+          cpu: 0
       volumeMounts:
         - mountPath: /var/lib/postgresql/data
           name: mainflux-things-postgres-data
