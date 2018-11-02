@@ -26,42 +26,46 @@ import (
 	httpapi "github.com/mainflux/mainflux/users/api/http"
 	"github.com/mainflux/mainflux/users/bcrypt"
 	"github.com/mainflux/mainflux/users/jwt"
+	"github.com/mainflux/mainflux/users/oauth"
 	"github.com/mainflux/mainflux/users/postgres"
 	stdprometheus "github.com/prometheus/client_golang/prometheus"
 	"google.golang.org/grpc"
 )
 
 const (
-	defLogLevel = "error"
-	defDBHost   = "localhost"
-	defDBPort   = "5432"
-	defDBUser   = "mainflux"
-	defDBPass   = "mainflux"
-	defDBName   = "users"
-	defHTTPPort = "8180"
-	defGRPCPort = "8181"
-	defSecret   = "users"
-	envLogLevel = "MF_USERS_LOG_LEVEL"
-	envDBHost   = "MF_USERS_DB_HOST"
-	envDBPort   = "MF_USERS_DB_PORT"
-	envDBUser   = "MF_USERS_DB_USER"
-	envDBPass   = "MF_USERS_DB_PASS"
-	envDBName   = "MF_USERS_DB"
-	envHTTPPort = "MF_USERS_HTTP_PORT"
-	envGRPCPort = "MF_USERS_GRPC_PORT"
-	envSecret   = "MF_USERS_SECRET"
+	defLogLevel           = "error"
+	defDBHost             = "localhost"
+	defDBPort             = "5432"
+	defDBUser             = "mainflux"
+	defDBPass             = "mainflux"
+	defDBName             = "users"
+	defHTTPPort           = "8180"
+	defGRPCPort           = "8181"
+	defSecret             = "users"
+	defMyQnapCloudApiBase = "https://auth.api.myqnapcloud.com"
+	envLogLevel           = "MF_USERS_LOG_LEVEL"
+	envDBHost             = "MF_USERS_DB_HOST"
+	envDBPort             = "MF_USERS_DB_PORT"
+	envDBUser             = "MF_USERS_DB_USER"
+	envDBPass             = "MF_USERS_DB_PASS"
+	envDBName             = "MF_USERS_DB"
+	envHTTPPort           = "MF_USERS_HTTP_PORT"
+	envGRPCPort           = "MF_USERS_GRPC_PORT"
+	envSecret             = "MF_USERS_SECRET"
+	envMyQnapCloudApiBase = "MF_USERS_MYQNAPCLOUD_API_BASE"
 )
 
 type config struct {
-	LogLevel string
-	DBHost   string
-	DBPort   string
-	DBUser   string
-	DBPass   string
-	DBName   string
-	HTTPPort string
-	GRPCPort string
-	Secret   string
+	LogLevel           string
+	DBHost             string
+	DBPort             string
+	DBUser             string
+	DBPass             string
+	DBName             string
+	HTTPPort           string
+	GRPCPort           string
+	Secret             string
+	MyQnapCloudApiBase string
 }
 
 func main() {
@@ -74,7 +78,7 @@ func main() {
 	db := connectToDB(cfg, logger)
 	defer db.Close()
 
-	svc := newService(db, cfg.Secret, logger)
+	svc := newService(db, cfg.Secret, cfg.MyQnapCloudApiBase, logger)
 	errs := make(chan error, 2)
 
 	go startHTTPServer(svc, cfg.HTTPPort, logger, errs)
@@ -92,15 +96,16 @@ func main() {
 
 func loadConfig() config {
 	return config{
-		LogLevel: mainflux.Env(envLogLevel, defLogLevel),
-		DBHost:   mainflux.Env(envDBHost, defDBHost),
-		DBPort:   mainflux.Env(envDBPort, defDBPort),
-		DBUser:   mainflux.Env(envDBUser, defDBUser),
-		DBPass:   mainflux.Env(envDBPass, defDBPass),
-		DBName:   mainflux.Env(envDBName, defDBName),
-		HTTPPort: mainflux.Env(envHTTPPort, defHTTPPort),
-		GRPCPort: mainflux.Env(envGRPCPort, defGRPCPort),
-		Secret:   mainflux.Env(envSecret, defSecret),
+		LogLevel:           mainflux.Env(envLogLevel, defLogLevel),
+		DBHost:             mainflux.Env(envDBHost, defDBHost),
+		DBPort:             mainflux.Env(envDBPort, defDBPort),
+		DBUser:             mainflux.Env(envDBUser, defDBUser),
+		DBPass:             mainflux.Env(envDBPass, defDBPass),
+		DBName:             mainflux.Env(envDBName, defDBName),
+		HTTPPort:           mainflux.Env(envHTTPPort, defHTTPPort),
+		GRPCPort:           mainflux.Env(envGRPCPort, defGRPCPort),
+		Secret:             mainflux.Env(envSecret, defSecret),
+		MyQnapCloudApiBase: mainflux.Env(envMyQnapCloudApiBase, defMyQnapCloudApiBase),
 	}
 }
 
@@ -113,12 +118,13 @@ func connectToDB(cfg config, logger logger.Logger) *sql.DB {
 	return db
 }
 
-func newService(db *sql.DB, secret string, logger logger.Logger) users.Service {
+func newService(db *sql.DB, secret string, oauthApiBase string, logger logger.Logger) users.Service {
 	repo := postgres.New(db)
 	hasher := bcrypt.New()
 	idp := jwt.New(secret)
+	myqnapcloud := oauth.New(oauthApiBase)
 
-	svc := users.New(repo, hasher, idp)
+	svc := users.New(repo, hasher, idp, myqnapcloud)
 	svc = api.LoggingMiddleware(svc, logger)
 	svc = api.MetricsMiddleware(
 		svc,

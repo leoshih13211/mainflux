@@ -29,9 +29,12 @@ func New(db *sql.DB) users.UserRepository {
 }
 
 func (ur userRepository) Save(user users.User) error {
-	q := `INSERT INTO users (email, password) VALUES ($1, $2)`
+	q := `INSERT INTO users (userId, email, hadId, clientId, accessToken, refreshToken)
+			VALUES ($1, $2, $3, $4, $5, $6)
+			ON CONFLICT (userid) do update
+  			set accesstoken = $5, refreshtoken = $6`
 
-	if _, err := ur.db.Exec(q, user.Email, user.Password); err != nil {
+	if _, err := ur.db.Exec(q, user.UserId, user.Email, user.HashId, user.ClientId, user.AccessToken, user.RefreshToken); err != nil {
 		if pqErr, ok := err.(*pq.Error); ok && errDuplicate == pqErr.Code.Name() {
 			return users.ErrConflict
 		}
@@ -42,10 +45,10 @@ func (ur userRepository) Save(user users.User) error {
 }
 
 func (ur userRepository) RetrieveByID(email string) (users.User, error) {
-	q := `SELECT password FROM users WHERE email = $1`
+	q := `SELECT hashId FROM users WHERE email = $1`
 
 	user := users.User{}
-	if err := ur.db.QueryRow(q, email).Scan(&user.Password); err != nil {
+	if err := ur.db.QueryRow(q, email).Scan(&user.UserId); err != nil {
 		if err == sql.ErrNoRows {
 			return user, users.ErrNotFound
 		}

@@ -40,8 +40,12 @@ func migrateDB(db *sql.DB) error {
 				Id: "users_1",
 				Up: []string{
 					`CREATE TABLE IF NOT EXISTS users (
-						email	 VARCHAR(254) PRIMARY KEY,
-						password CHAR(60)	  NOT NULL
+						userId	     VARCHAR(30) PRIMARY KEY,
+						email	     VARCHAR(254) NOT NULL,
+						hadId	     VARCHAR(100) NOT NULL,
+						clientId	 CHAR(30)     NOT NULL,
+						accessToken  CHAR(60)	  NOT NULL,
+						refreshToken CHAR(60)	  NOT NULL
 					)`,
 				},
 				Down: []string{"DROP TABLE users"},

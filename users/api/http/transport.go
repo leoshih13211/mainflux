@@ -97,6 +97,8 @@ func encodeError(_ context.Context, err error, w http.ResponseWriter) {
 	w.Header().Set("Content-Type", contentType)
 
 	switch err {
+	case users.ErrMyQanpCloudInvalidAccessToken, users.ErrMyQnapCloudServerError, users.ErrMyQnapCloudCannotAccess:
+		w.WriteHeader(http.StatusBadRequest)
 	case users.ErrMalformedEntity:
 		w.WriteHeader(http.StatusBadRequest)
 	case users.ErrUnauthorizedAccess:

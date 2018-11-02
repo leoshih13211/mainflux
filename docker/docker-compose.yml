@@ -65,6 +65,8 @@ services:
       MF_USERS_HTTP_PORT: 8180
       MF_USERS_GRPC_PORT: 8181
       MF_USERS_SECRET: secret
+      MF_USERS_LOG_LEVEL: warn
+      MF_USERS_MYQNAPCLOUD_API_BASE: https://auth.api.alpha-myqnapcloud.com
     ports:
       - 8180:8180
     networks:

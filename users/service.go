@@ -7,7 +7,9 @@
 
 package users
 
-import "errors"
+import (
+	"errors"
+)
 
 var (
 	// ErrConflict indicates usage of the existing email during account
@@ -24,6 +26,12 @@ var (
 
 	// ErrNotFound indicates a non-existent entity request.
 	ErrNotFound = errors.New("non-existent entity")
+
+	ErrMyQanpCloudInvalidAccessToken = errors.New("Invalid access token")
+
+	ErrMyQnapCloudCannotAccess = errors.New("MyQnapCloud can not access")
+
+	ErrMyQnapCloudServerError = errors.New("MyQnapCloud internel server error")
 )
 
 // Service specifies an API that must be fullfiled by the domain service
@@ -47,34 +55,46 @@ type Service interface {
 var _ Service = (*usersService)(nil)
 
 type usersService struct {
-	users  UserRepository
-	hasher Hasher
-	idp    IdentityProvider
+	users       UserRepository
+	hasher      Hasher
+	idp         IdentityProvider
+	myqnapcloud OAuthProvider
 }
 
 // New instantiates the users service implementation.
-func New(users UserRepository, hasher Hasher, idp IdentityProvider) Service {
-	return &usersService{users: users, hasher: hasher, idp: idp}
+func New(users UserRepository, hasher Hasher, idp IdentityProvider, myqnapcloud OAuthProvider) Service {
+	return &usersService{users: users, hasher: hasher, idp: idp, myqnapcloud: myqnapcloud}
 }
 
 func (svc usersService) Register(user User) error {
-	hash, err := svc.hasher.Hash(user.Password)
+	hash, err := svc.hasher.Hash(user.UserId)
 	if err != nil {
 		return ErrMalformedEntity
 	}
 
-	user.Password = hash
+	user.HashId = hash
 	return svc.users.Save(user)
 }
 
 func (svc usersService) Login(user User) (string, error) {
-	dbUser, err := svc.users.RetrieveByID(user.Email)
+	userId, email, clientId, err := svc.myqnapcloud.TokenInfo(user.AccessToken)
 	if err != nil {
-		return "", ErrUnauthorizedAccess
+		return "", err
 	}
 
-	if err := svc.hasher.Compare(user.Password, dbUser.Password); err != nil {
-		return "", ErrUnauthorizedAccess
+	hash, err := svc.hasher.Hash(user.UserId)
+	if err != nil {
+		return "", ErrMalformedEntity
+	}
+
+	user.HashId = hash
+	user.UserId = userId
+	user.Email = email
+	user.ClientId = clientId
+
+	err = svc.users.Save(user)
+	if err != nil {
+		return "", err
 	}
 
 	return svc.idp.TemporaryKey(user.Email)

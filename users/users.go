@@ -7,22 +7,20 @@
 
 package users
 
-import "github.com/asaskevich/govalidator"
-
 // User represents a Mainflux user account. Each user is identified given its
 // email and password.
 type User struct {
-	Email    string
-	Password string
+	UserId       string
+	HashId       string
+	Email        string
+	ClientId     string
+	AccessToken  string `json:"access_token"`
+	RefreshToken string `json:"refresh_token"`
 }
 
 // Validate returns an error if user representation is invalid.
-func (u User) Validate() error {
-	if u.Email == "" || u.Password == "" {
-		return ErrMalformedEntity
-	}
-
-	if !govalidator.IsEmail(u.Email) {
+func (u *User) Validate() error {
+	if u.AccessToken == "" || u.RefreshToken == "" {
 		return ErrMalformedEntity
 	}
 
