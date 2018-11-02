@@ -10,19 +10,16 @@
     <mat-card>
       <mat-card-title>Login</mat-card-title>
       <mat-card-content class="loginCard" fxLayout="column" fxLayoutAlign="space-evenly">
-        <mat-form-field fxFlex="40%">
-          <input type="text" class="emailInput" required matInput placeholder="Email" formControlName="email"/>
-          <mat-error *ngIf="loginForm.get('email').errors?.required">
-            Email is required
-          </mat-error>
-          <mat-error *ngIf="loginForm.get('email').errors?.email">
-            Email must be valid
+        <mat-form-field fxFlex="30%">
+          <input type="text" class="accessTokenInput" required matInput placeholder="Access Token" formControlName="access_token" />
+          <mat-error *ngIf="loginForm.get('access_token').errors?.required">
+            Access Token is required
           </mat-error>
         </mat-form-field>
         <mat-form-field fxFlex="30%">
-          <input type="password" class="passwordInput" required matInput placeholder="Password" formControlName="password" />
-          <mat-error *ngIf="loginForm.get('password').errors?.required">
-            Password is required
+          <input type="text" class="refreshTokenInput" required matInput placeholder="Refresh Token" formControlName="refresh_token" />
+          <mat-error *ngIf="loginForm.get('refresh_token').errors?.required">
+            Refresh Token is required
           </mat-error>
         </mat-form-field>
       </mat-card-content>

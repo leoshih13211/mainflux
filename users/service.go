@@ -82,7 +82,7 @@ func (svc usersService) Login(user User) (string, error) {
 		return "", err
 	}
 
-	hash, err := svc.hasher.Hash(user.UserId)
+	hash, err := svc.hasher.Hash(userId)
 	if err != nil {
 		return "", ErrMalformedEntity
 	}

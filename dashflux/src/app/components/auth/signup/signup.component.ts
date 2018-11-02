@@ -55,8 +55,8 @@ export class SignupComponent implements OnInit {
 
   getUserDataFromForm() {
     return {
-      email: this.signupForm.get('email').value,
-      password: this.signupForm.get('passwords.password').value
+      access_token: this.signupForm.get('email').value,
+      refresh_token: this.signupForm.get('passwords.password').value
     };
   }
 }

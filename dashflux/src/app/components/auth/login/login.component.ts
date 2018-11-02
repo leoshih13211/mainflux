@@ -27,8 +27,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required]],
+      access_token: ['', [Validators.required]],
+      refresh_token: ['', [Validators.required]],
     });
   }
 
@@ -42,8 +42,8 @@ export class LoginComponent implements OnInit {
 
   getUserDataFromForm() {
     return {
-      email: this.loginForm.get('email').value,
-      password: this.loginForm.get('password').value
+      access_token: this.loginForm.get('access_token').value,
+      refresh_token: this.loginForm.get('refresh_token').value
     };
   }
 }
