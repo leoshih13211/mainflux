@@ -1,0 +1,3 @@
+@mixin bg($fileName, $position: center center, $bgColor: transparent, $repeat: no-repeat){
+  background: $bgColor url(#{$assetsPath}#{$fileName}) $repeat $position;
+}

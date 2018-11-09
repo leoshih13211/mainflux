@@ -1,0 +1,29 @@
+@import url('~normalize.css/normalize.css');
+@import './animate';
+@import './background';
+
+html, body, #app{
+  width: 100%;
+  height: 100%;
+  font-family: $theme-font-family;
+  font-weight: $theme-font-weight;
+  color: color("black");
+  font-size: $theme-font-size;
+}
+
+#app{
+  background: #f7f7f7;
+  overflow: hidden;
+}
+
+hr{
+  width: 100%;
+}
+
+img {
+  border: none;
+}
+
+i{
+  line-height: 1em;
+}

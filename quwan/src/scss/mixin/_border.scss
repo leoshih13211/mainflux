@@ -1,0 +1,3 @@
+@mixin border($width: 1px, $style: solid, $color: color("light-gray")){
+  border: #{$width} #{$style} #{$color}
+}

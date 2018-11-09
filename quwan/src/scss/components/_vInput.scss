@@ -1,0 +1,41 @@
+@import '~scss/mixin/_border.scss';
+
+$input-primary-border: color("light-gray");
+$input-paimary-bg: color("white");
+
+$input-primary-hover-border: #b3b6ba;
+$input-primary-focus-border: #1665d8;
+
+$input-padding-left: 10px;
+$input-padding-right: 28px;
+
+%clear_default{
+  outline: none;
+  border: none;
+}
+
+input
+  :not([type="checkbox"])
+  :not([type="radio"]) {
+  @extend %clear_default;
+  width: calc(100% - #{$input-padding-left} - #{$input-padding-right});
+  height: 5vh;
+  line-height: 5vh;
+  min-width: 100px;
+  min-height: 28px;
+  margin: 10px 0px;
+  padding: 0px #{$input-padding-right} 0px #{$input-padding-left};
+  background-color: $input-paimary-bg;
+  border-radius: 3px;
+  @include border();
+  &:hover{
+    border-color: $input-primary-hover-border;
+  }
+  &:focus{
+    border-color: $input-primary-focus-border;
+  }
+  &.invalid,
+   [invalid] {
+    border-color: theme-color('danger');
+   }
+}

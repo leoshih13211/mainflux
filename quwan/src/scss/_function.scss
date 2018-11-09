@@ -1,0 +1,13 @@
+@import './variables';
+
+@function color($key: #ffffff) {
+  @return map-get($colors, $key );
+}
+
+@function theme-color($key: "primary") {
+  @return map-get($theme-colors, $key );
+}
+
+@function icon($key) {
+  @return map-get($icons, $key);
+}

@@ -1,0 +1,11 @@
+.dialog.Loading{
+  .body{
+    width: 250px;
+    height: 60px;
+    background: color('light-gray');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+  }
+}

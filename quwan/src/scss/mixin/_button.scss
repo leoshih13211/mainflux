@@ -1,0 +1,13 @@
+@mixin button_variant($bg-color, $border-color, $color: color("white")) {
+  background-color: $bg-color;
+  border-color: lighten($color: $border-color, $amount: 50%);
+  color: $color;
+
+  &:hover{
+    border-color: darken($color: $border-color, $amount: 10%);
+  }
+
+  &:active{
+    background-color: darken($color: $border-color, $amount: 10%);
+  }
+}

@@ -1,0 +1,25 @@
+$msg_color: color('white');
+
+.qMsg{
+  width: 100%;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  color: $msg_color;
+  position: absolute;
+  top: -2em;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.show {
+    top: 0px;
+    transition: all 0.5s;
+  }
+}
+
+@each $name, $color in $theme-colors {
+  .qMsg-#{$name}{
+    background-color: $color;
+  }
+}
