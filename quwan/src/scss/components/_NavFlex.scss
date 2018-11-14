@@ -1,0 +1,11 @@
+nav{
+  padding: 20px 0px;
+  > a {
+    &:hover{
+      background-color: color('light-gray');
+    }
+    &:not(:last-child){
+      margin-right: 10px;
+    }
+  }
+}

@@ -27,6 +27,7 @@ export default {
 <style scoped lang="scss">
   .btnName{
     vertical-align: middle;
+    width: 100%;
     height: 100%;
     display: inline-block;
     display: flex;

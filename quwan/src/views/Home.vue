@@ -26,7 +26,7 @@ export default {
 <style lang="scss" scoped>
   section{
     width: 100%;
-    height: 100%;
+    height: 92vh;
     display: flex;
   }
   .home{
@@ -39,5 +39,7 @@ export default {
     height: 100%;
     padding: 20px;
     box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
   }
 </style>

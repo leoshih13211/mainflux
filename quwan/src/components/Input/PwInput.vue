@@ -9,11 +9,11 @@
 
 <script>
 import md5 from 'md5';
-import _qInputProto from './_qInputProto';
+import _InputProto from './_InputProto';
 
 export default {
   name: 'PwInput',
-  extends: _qInputProto,
+  extends: _InputProto,
   methods: {
     onInput(pwd) {
       this.$emit('onInput', md5(pwd));

@@ -6,13 +6,13 @@ const getters = {};
 // actions
 const actions = {
   setGroup({ commit }, group) {
-    commit(types.SET_TOPIC, group);
+    commit(types.SET_GROUP, group);
   },
 };
 
 // mutations
 const mutations = {
-  [types.SET_TOPIC](state, group) {
+  [types.SET_GROUP](state, group) {
     state.selectedGroup = group;
   },
 };
@@ -20,7 +20,7 @@ const mutations = {
 
 // initial state
 const state = {
-  selectedGroup: '',
+  selectedGroup: 'Overview',
 };
 
 export default {

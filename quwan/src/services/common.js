@@ -21,6 +21,7 @@ import cookieManager from './cookieManager';
  */
 export function fetchSetup(path, data, replace) {
   const token = `Bearer ${cookieManager.getValue('quwan_token')}` || '';
+  const API_URL_PREFIX = '/api';
   let fetchOption = {
     method: 'POST',
     body: JSON.stringify(data),
@@ -34,7 +35,7 @@ export function fetchSetup(path, data, replace) {
   };
 
   fetchOption = Object.assign({}, fetchOption, replace);
-  return new Request(path, fetchOption);
+  return new Request(API_URL_PREFIX + path, fetchOption);
 }
 
 /**

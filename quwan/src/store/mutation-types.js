@@ -15,5 +15,9 @@ export const DIALOG_OPEN = 'DIALOG_OPEN';
 export const DIALOG_UPDATE = 'DIALOG_UPDATE';
 export const DIALOG_CLOSE = 'DIALOG_CLOSE';
 
-export const SET_TOPIC = 'SET_TOPIC';
+/* Sidebar */
+export const SET_GROUP = 'SET_GROUP';
+
+/* Site */
+export const SET_NAV = 'SET_NAV';
 

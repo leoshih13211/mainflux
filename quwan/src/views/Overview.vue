@@ -4,6 +4,8 @@
 
 <script>
 import Map from 'components/Map.vue';
+import { mapActions } from 'vuex';
+
 
 export default {
   components: {
@@ -57,10 +59,17 @@ export default {
           ],
         ],
         lineLayerDepends: 'status', // default 'color'
+        fitMap: 'marker', // default marker
       },
     };
   },
+  mounted() {
+    this.setGroup('Overview');
+  },
   methods: {
+    ...mapActions('Sidebar', [
+      'setGroup',
+    ]),
     markerOnClick(marker) {
       console.log(marker);
     },

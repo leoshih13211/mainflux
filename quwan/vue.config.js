@@ -31,10 +31,13 @@ module.exports = {
   },
   devServer: {
     proxy: {
-      '/': {
+      '/api': {
         target: serviceEnv.proxy.base,
         secure: false,
         changeOrigin: true,
+        pathRewrite: {
+          '^/api': '/', // rewrite path
+        },
       },
       '/oauth': {
         target: serviceEnv.proxy.auth,

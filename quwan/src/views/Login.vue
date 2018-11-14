@@ -4,7 +4,7 @@
       <h1>QuWan Cloud</h1>
     </div>
     <div class="content">
-      <qIconButton
+      <qButtonIcon
         :front-icon="loginBtnLogo"
         name="Login"
         class="btn qButton-info loginBtn"
@@ -18,12 +18,12 @@ import { mapActions } from 'vuex';
 import cookieManager from 'services/cookieManager';
 import auth from 'services/auth';
 import logoWhiteLogo from 'assets/logo_myqnapcloud.png';
-import qIconButton from 'components/Button/qIconButton.vue';
+import qButtonIcon from 'components/Button/ButtonIcon.vue';
 
 export default {
   name: 'Login',
   components: {
-    qIconButton,
+    qButtonIcon,
   },
   data() {
     return {
@@ -59,7 +59,7 @@ export default {
           cookieManager.deleteCookie('access_token');
           cookieManager.deleteCookie('refresh_token');
           this.dialogClose({ type: 'Loading' });
-          this.$router.push('/org');
+          this.$router.push('/overview');
         })
         .catch((error) => {
           const e = error || '';
@@ -139,9 +139,8 @@ $login-border-gap: 20px;
 
 .Login{
   width: 30vw;
-  min-height: 300px;
+  min-height: 40vh;
   min-width: 275px;
-  height: 25vh;
   margin: 0px auto;
   box-sizing: border-box;
   padding: $login-border-gap;
@@ -163,6 +162,7 @@ $login-border-gap: 20px;
     justify-content: space-between;
     text-align: center;
     flex: 1 1;
+    margin-bottom: 40px;;
   }
   .content{
     display: flex;
@@ -172,8 +172,9 @@ $login-border-gap: 20px;
     flex: 3 3;
     .loginBtn{
       width: 320px;
-      height: 80px;
+      height: 60px;
       font-size: 26px;
+      color: #fff;
     }
   }
 }

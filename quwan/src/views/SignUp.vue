@@ -27,9 +27,9 @@
 <script>
 import { mapActions } from 'vuex';
 import { isObject } from 'lodash';
-import qMailInput from 'components/Input/qMailInput.vue';
-import qPwInput from 'components/Input/qPwInput.vue';
-import qButton from 'components/Button/qButton.vue';
+import qMailInput from 'components/Input/MailInput.vue';
+import qPwInput from 'components/Input/PwInput.vue';
+import qButton from 'components/Button/Button.vue';
 import validation from 'common/validation';
 import auth from 'services/auth';
 

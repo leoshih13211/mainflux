@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import _qInputProto from './_qInputProto';
+import _InputProto from './_InputProto';
 
 export default {
   name: 'MailInput',
-  extends: _qInputProto,
+  extends: _InputProto,
   methods: {
     onInput(email) {
       this.$emit('onInput', email);

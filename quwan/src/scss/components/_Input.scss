@@ -14,16 +14,14 @@ $input-padding-right: 28px;
   border: none;
 }
 
-input
-  :not([type="checkbox"])
-  :not([type="radio"]) {
+input:not([type="checkbox"]):not([type="radio"]) {
   @extend %clear_default;
-  width: calc(100% - #{$input-padding-left} - #{$input-padding-right});
+  // width: calc(100% - #{$input-padding-left} - #{$input-padding-right});
   height: 5vh;
   line-height: 5vh;
   min-width: 100px;
   min-height: 28px;
-  margin: 10px 0px;
+  margin: 10px 10px;
   padding: 0px #{$input-padding-right} 0px #{$input-padding-left};
   background-color: $input-paimary-bg;
   border-radius: 3px;

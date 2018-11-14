@@ -1,12 +1,18 @@
 <template>
-  <div id="map"/>
+  <div>
+    <div class="searchBar">
+      <label for="searchKeywords">Search</label>
+      <input id ="searchKeywords" v-model="searchKeywords" type="text">
+    </div>
+    <div id="map"/>
+  </div>
 </template>
 
 <script>
 import L from 'leaflet';
 import 'leaflet-curve';
 import { createCmpInstance } from 'common/utilities';
-import qButton from './Button/qButton.vue';
+import qButton from './Button/Button.vue';
 
 export default {
   name: 'Map',
@@ -22,7 +28,7 @@ export default {
       layerSource: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       layerOptions: {
         minZoom: 1,
-        maxZoom: 16,
+        maxZoom: 19,
       },
       initView: [25.037789, 121.560768], // Taipei
       status: {
@@ -30,13 +36,17 @@ export default {
         warning: 'orange',
         danger: 'red',
       },
+      searchKeywords: '',
     };
   },
   computed: {
     layers() {
       const layers = this.cfg.labelName.map((name, key) => {
         const markers = this.cfg.markerGroup[key].map(marker => this.createMarker(marker));
-        const lines = this.cfg.lineGroup[key].map(line => this.createLine(line));
+        let lines = [];
+        if (this.cfg.lineGroup[key]) {
+          lines = this.cfg.lineGroup[key].map(line => this.createLine(line));
+        }
 
         return L.layerGroup([...markers, ...lines]);
       });
@@ -45,9 +55,9 @@ export default {
   },
   mounted() {
     const osm = new L.TileLayer(this.layerSource, this.layerOptions);
-    // initialize the map on the "map" div
-
     const controller = this.createLayerController();
+
+    // initialize the map on the "map" div
     this.map = this.createMap();
     // 建立 Leaflet 地圖
     // 設定經緯度座標
@@ -61,7 +71,8 @@ export default {
 
     // 建立圖層控制面板
     L.control.layers(...controller).addTo(this.map);
-    this.map.fitWorld();
+
+    this.setFitMap();
   },
   methods: {
     createMap() {
@@ -164,6 +175,31 @@ export default {
         (stY + dtY) / 2,
       ];
     },
+    setFitMap() {
+      let lats;
+      switch (this.cfg.fitMap) {
+        case 'line':
+          lats = this.fitMapByLines();
+          break;
+        case 'world':
+          lats = null;
+          break;
+        case 'marker':
+        default:
+          lats = this.fitMapByMarker();
+          break;
+      }
+      if (!lats) this.map.fitWorld(); // default fit whole map
+      else this.map.fitBounds(lats);
+    },
+    fitMapByLines() {
+      return this.cfg.lineGroup
+        .map(group => group.map(line => [line.st, line.dt]));
+    },
+    fitMapByMarker() {
+      return this.cfg.markerGroup
+        .map(group => group.map(marker => marker.pos));
+    },
   },
 };
 </script>
@@ -173,6 +209,9 @@ export default {
     * element that contains the map. */
   #map {
     z-index: 0;
-    height: 80%;
+    height: 80vh;
+    width: 100%;
+    max-height: 500px;
+    border-radius: 5px;
   }
 </style>

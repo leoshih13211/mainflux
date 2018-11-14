@@ -1,0 +1,16 @@
+.qTable{
+  background-color: #fff;
+  border-radius: 5px;
+  .title{
+    margin: 1rem;
+  }
+  th, td{
+    padding: .75rem 1rem;
+  }
+  thead{
+    th{
+      color: color('dark-gray');
+      font-weight: normal;
+    }
+  }
+}

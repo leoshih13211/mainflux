@@ -16,7 +16,7 @@
 import Home from 'views/Home.vue';
 import Login from 'views/Login.vue';
 import SignUp from 'views/SignUp.vue';
-import qDialog from 'components/Dialog/qDialog.vue';
+import qDialog from 'components/Dialog/Dialog.vue';
 import SysMsg from 'components/Message/SysMsg.vue';
 import { mapState } from 'vuex';
 

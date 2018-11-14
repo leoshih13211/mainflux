@@ -1,4 +1,4 @@
-import qInput from './qInput.vue';
+import qInput from './Input.vue';
 
 const vInputProto = {
   components: {

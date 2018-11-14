@@ -1,5 +1,5 @@
 <template>
-  <qButton :name="name">
+  <qButton :name="name" class="buttonIcon">
     <template slot="icon_front">
       <img :src="frontIcon" class="iconFront">
     </template>
@@ -9,7 +9,7 @@
   </qButton>
 </template>
 <script>
-import qButton from './qButton.vue';
+import qButton from './Button.vue';
 
 export default {
   name: 'QIconButton',
@@ -47,8 +47,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  .buttonIcon{
+    padding: 0px 11px;
+
+  }
   img{
     height: 100%;
+    max-width: 70px;
     padding: 5px;
     &.iconFront{
       float: left;

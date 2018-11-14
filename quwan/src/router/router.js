@@ -16,26 +16,36 @@ const router = new Router({
       meta: { requireAuth: true },
       children: [
         {
-          path: '/org',
-          name: 'dashboard',
-          component: () => import(/* webpackChunkName: "dashboard" */ 'views/Dashboard.vue'),
+          path: '/overview',
+          name: 'Map',
+          component: () => import(/* webpackChunkName: "dashboard" */ 'views/Overview.vue'),
           meta: { requireAuth: true },
-          children: [
-            {
-              path: '/',
-              name: 'dashboard',
-              component: () => import(/* webpackChunkName: "dashboard" */ 'views/Dashboard.vue'),
-              meta: { requireAuth: true },
-            },
-          ],
         },
         {
           path: '/site',
-          name: 'dashboard',
-          component: () => import(/* webpackChunkName: "dashboard" */ 'views/Dashboard.vue'),
+          name: 'Site',
+          component: () => import(/* webpackChunkName: "dashboard" */ 'views/Site.vue'),
           meta: { requireAuth: true },
+          redirect: '/site/overview',
           children: [
-
+            {
+              path: 'overview',
+              name: 'Overview',
+              component: () => import(/* webpackChunkName: "dashboard" */ 'views/Site/Overview.vue'),
+              meta: { requireAuth: true },
+            },
+            {
+              path: 'devices',
+              name: 'Devices',
+              component: () => import(/* webpackChunkName: "dashboard" */ 'views/Site/Devices.vue'),
+              meta: { requireAuth: true },
+            },
+            {
+              path: 'gateway',
+              name: 'Gateway',
+              component: () => import(/* webpackChunkName: "dashboard" */ 'views/Site/Gateway.vue'),
+              meta: { requireAuth: true },
+            },
           ],
         },
       ],

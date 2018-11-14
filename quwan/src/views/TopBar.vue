@@ -62,7 +62,6 @@ export default {
 
 $color-gray: color('light-gray');
 $theme-primary: theme-color('primary');
-$item-border-color: darken($color: $color-gray, $amount: 10%);
 $item-color: $color-gray;
 $item-hover-color: $theme-primary;
 $item-hover-bg: lighten($color-gray, 5%);
@@ -73,7 +72,7 @@ $item-hover-bg: lighten($color-gray, 5%);
   .Topbar{
     width: 100%;
     height: $topbar-height;
-    min-height: 26px;
+    min-height: 60px;
     max-height: 60px;
     display: flex;
     align-items: center;
@@ -99,7 +98,7 @@ $item-hover-bg: lighten($color-gray, 5%);
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-left: 15px;
+        padding-left: 20px;
       }
       .items{
         display: flex;
@@ -109,6 +108,7 @@ $item-hover-bg: lighten($color-gray, 5%);
         justify-content: center;
         align-items: center;
         width: 8vh;
+        min-width: 50px;
         height: 100%;
         cursor: pointer;
         color: $item-color;
