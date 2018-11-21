@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "status": 1,
+    "name": "WAN1",
+    "macAddress": "macAddress",
+    "method": "Static IP",
+    "routeMode": "NAT",
+    "priority": "Always"
+  },
+  {
+    "id": 2,
+    "status": 0,
+    "name": "WAN2",
+    "macAddress": "none",
+    "method": "Static IP",
+    "routeMode": "NAT",
+    "priority": "Backup"
+  },
+  {
+    "id": 3,
+    "status": 2,
+    "name": "WAN3",
+    "macAddress": "none",
+    "method": "Static IP",
+    "routeMode": "NAT",
+    "priority": "Backup"
+  },
+  {
+    "id": 4,
+    "status": 1,
+    "name": "Mobile Internet",
+    "macAddress": "none",
+    "method": "PPP",
+    "routeMode": "NAT",
+    "priority": "Backup"
+  }
+]

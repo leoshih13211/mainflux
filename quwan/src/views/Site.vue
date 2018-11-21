@@ -19,18 +19,17 @@ export default {
     return {
       navs: [
         { name: 'Overview', router: '/site/overview' },
-        // { name: 'Devices', router: 'devices' },
-        // { name: 'Throughtput' },
+        { name: 'Device', router: 'device' },
         { name: 'Gateway', router: '/site/gateway' },
         { name: 'VPN' },
-        { name: 'Event Log' },
+        { name: 'Event Log', router: '/site/eventlog' },
         { name: 'Summary Report' },
       ],
       activeNav: 'Overview',
     };
   },
   mounted() {
-    this.setGroup('Site');
+    this.setGroup('Site Dashboard');
   },
   methods: {
     ...mapActions('Sidebar', [
@@ -45,7 +44,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '~scss/_function';
 
 nav{
   padding-top: 0px;
@@ -53,7 +51,6 @@ nav{
 
 .tabContent{
   width: 100%;
-  height: 100%;
   box-sizing: border-box;
   border-radius: 5px;
 }

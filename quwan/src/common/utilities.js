@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import cookieManager from 'services/cookieManager';
+import OC from 'open-color/open-color.json';
+
 
 export function isNumber(n) {
   return !Number.isNaN(parseFloat(n)) && Number.isFinite(n);
@@ -69,4 +71,21 @@ export function createCmpInstance(cmp, params = null) {
   // Setting the Slot
   // if(params && params.slots) instance.$slots.default = [params.slots]
   return instance;
+}
+
+export function palette(color = '', idx = 4) {
+  /*
+    All Colors:
+      red , pink , grape , violet , indigo , blue , cyan , teal , green , lime , yellow , orange
+    idx: 0~9
+  */
+  const COLORS = ['red', 'pink', 'grape', 'violet', 'indigo', 'blue', 'cyan', 'teal', 'green', 'lime', 'yellow', 'orange'];
+  const validColor = COLORS.find(c => c === color);
+
+  if (!validColor) {
+    const randomIdx = Math.floor(Math.random() * COLORS.length);
+    color = COLORS[randomIdx];
+  }
+
+  return OC[color][idx % COLORS.length];
 }

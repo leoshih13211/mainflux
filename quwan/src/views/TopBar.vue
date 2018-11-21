@@ -1,6 +1,6 @@
 <template>
   <div class="Topbar">
-    <h2 class="title bg-primary" @click="goHome">QuWAN</h2>
+    <h2 class="title bg-primary" @click="backHome">QuWAN</h2>
     <div class="utilities">
       <div class="subTitle"/>
       <div class="items">
@@ -49,7 +49,7 @@ export default {
       cookieManager.deleteAllCookies();
       this.$router.push('login');
     },
-    goHome() {
+    backHome() {
       this.$router.push('/');
     },
   },
@@ -57,9 +57,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '~scss/_variables';
-@import '~scss/_function';
-
 $color-gray: color('light-gray');
 $theme-primary: theme-color('primary');
 $item-color: $color-gray;
@@ -72,12 +69,16 @@ $item-hover-bg: lighten($color-gray, 5%);
   .Topbar{
     width: 100%;
     height: $topbar-height;
-    min-height: 60px;
-    max-height: 60px;
+    min-height: $topbar-min-height;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: color('white');
+    /* Shadow */
+    -webkit-box-shadow: 0px 5px 9px 0px rgba(0,0,0,0.34);
+    -moz-box-shadow: 0px 5px 9px 0px rgba(0,0,0,0.34);
+    box-shadow: 0px 5px 9px 0px rgba(0,0,0,0.34);
+    z-index: 2;
     .title{
       width: 10vw;
       height: 100%;
@@ -107,8 +108,9 @@ $item-hover-bg: lighten($color-gray, 5%);
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 8vh;
+        width: 5vw;
         min-width: 50px;
+        max-width: 65px;
         height: 100%;
         cursor: pointer;
         color: $item-color;

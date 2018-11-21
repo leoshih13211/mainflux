@@ -14,11 +14,12 @@ const router = new Router({
       name: 'home',
       component: Home,
       meta: { requireAuth: true },
+      redirect: '/app/worldmap',
       children: [
         {
-          path: '/overview',
-          name: 'Map',
-          component: () => import(/* webpackChunkName: "dashboard" */ 'views/Overview.vue'),
+          path: '/worldmap',
+          name: 'WorldMap',
+          component: () => import(/* webpackChunkName: "dashboard" */ 'views/WorldMap.vue'),
           meta: { requireAuth: true },
         },
         {
@@ -30,14 +31,14 @@ const router = new Router({
           children: [
             {
               path: 'overview',
-              name: 'Overview',
+              name: 'Site_Overview',
               component: () => import(/* webpackChunkName: "dashboard" */ 'views/Site/Overview.vue'),
               meta: { requireAuth: true },
             },
             {
-              path: 'devices',
-              name: 'Devices',
-              component: () => import(/* webpackChunkName: "dashboard" */ 'views/Site/Devices.vue'),
+              path: 'device',
+              name: 'Device',
+              component: () => import(/* webpackChunkName: "dashboard" */ 'views/Site/Device.vue'),
               meta: { requireAuth: true },
             },
             {
@@ -46,7 +47,23 @@ const router = new Router({
               component: () => import(/* webpackChunkName: "dashboard" */ 'views/Site/Gateway.vue'),
               meta: { requireAuth: true },
             },
+            {
+              path: 'eventlog',
+              name: 'EventLog',
+              component: () => import(/* webpackChunkName: "dashboard" */ 'views/Site/EventLog.vue'),
+              meta: { requireAuth: true },
+            },
           ],
+        },
+        {
+          path: '/blank',
+          name: 'Blank',
+          component: () => import(/* webpackChunkName: "dashboard" */ 'views/_Blank.vue'),
+          meta: { requireAuth: true },
+        },
+        {
+          path: '/',
+          redirect: '/blank',
         },
       ],
     },
@@ -59,7 +76,6 @@ const router = new Router({
       component: () => import(/* webpackChunkName: "login" */ 'views/Login.vue'),
       meta: { requireAuth: false },
     },
-    { path: '/', redirect: '/app/' },
   ],
 });
 

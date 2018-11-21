@@ -1,7 +1,10 @@
-nav{
+nav.nav-pills{
+  width: 100%;
   padding: 20px 0px;
-  > a {
-    &:hover{
+  > a.nav-link {
+    border-radius: 1.5rem;
+    margin-bottom: 10px;
+    &:not(.active):hover{
       background-color: color('light-gray');
     }
     &:not(:last-child){

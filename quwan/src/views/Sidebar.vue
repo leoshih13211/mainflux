@@ -39,9 +39,9 @@ export default {
         ]
        */
       groups: [
-        { name: 'Overview', router: '/overview' },
-        { name: 'Site', router: '/site' },
-        { name: 'eMap', router: '/' },
+        { name: 'WorldMap', router: '/worldmap' },
+        { name: 'Site Dashboard', router: '/site' },
+        { name: 'eMap/Floor Plan', router: '/' },
         { name: 'System Status', router: '/' },
         { name: 'Static Route', router: '/' },
         { name: 'Network Status', router: '/' },
@@ -85,7 +85,6 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-@import '~scss/_function';
 $theme-primary: theme-color('primary');
 
 .sidebar{

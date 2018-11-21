@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import _InputProto from './_InputProto';
+import _InputProto from './_Input_Proto';
 
 export default {
   name: 'MailInput',

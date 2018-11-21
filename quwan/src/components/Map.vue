@@ -1,8 +1,9 @@
 <template>
-  <div>
+  <div class="map-group">
     <div class="searchBar">
-      <label for="searchKeywords">Search</label>
-      <input id ="searchKeywords" v-model="searchKeywords" type="text">
+
+      <!-- <label for="searchKeywords">Search</label> -->
+      <!-- <input id ="searchKeywords" v-model="searchKeywords" type="text"> -->
     </div>
     <div id="map"/>
   </div>
@@ -11,6 +12,7 @@
 <script>
 import L from 'leaflet';
 import 'leaflet-curve';
+import { cloneDeep } from 'lodash';
 import { createCmpInstance } from 'common/utilities';
 import qButton from './Button/Button.vue';
 
@@ -28,7 +30,7 @@ export default {
       layerSource: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       layerOptions: {
         minZoom: 1,
-        maxZoom: 19,
+        maxZoom: 18, // max 19
       },
       initView: [25.037789, 121.560768], // Taipei
       status: {
@@ -37,15 +39,23 @@ export default {
         danger: 'red',
       },
       searchKeywords: '',
+      cfgFormat: {
+        labelName: [],
+        markerGroup: [],
+        lineGroup: [],
+        fitMap: 'marker', // default marker
+        showController: false,
+      },
+      userCfg: {},
     };
   },
   computed: {
     layers() {
-      const layers = this.cfg.labelName.map((name, key) => {
-        const markers = this.cfg.markerGroup[key].map(marker => this.createMarker(marker));
+      const layers = this.userCfg.markerGroup.map((name, key) => {
+        const markers = this.userCfg.markerGroup[key].map(marker => this.createMarker(marker));
         let lines = [];
-        if (this.cfg.lineGroup[key]) {
-          lines = this.cfg.lineGroup[key].map(line => this.createLine(line));
+        if (this.userCfg.lineGroup[key]) {
+          lines = this.userCfg.lineGroup[key].map(line => this.createLine(line));
         }
 
         return L.layerGroup([...markers, ...lines]);
@@ -53,9 +63,15 @@ export default {
       return layers;
     },
   },
+  created() {
+    this.userCfg = cloneDeep(this.cfgFormat);
+    Object.keys(this.cfg)
+      .forEach((key) => {
+        if (key in this.userCfg) this.userCfg[key] = this.cfg[key];
+      });
+  },
   mounted() {
     const osm = new L.TileLayer(this.layerSource, this.layerOptions);
-    const controller = this.createLayerController();
 
     // initialize the map on the "map" div
     this.map = this.createMap();
@@ -70,7 +86,7 @@ export default {
     });
 
     // 建立圖層控制面板
-    L.control.layers(...controller).addTo(this.map);
+    if (this.userCfg.showController) this.createLayerController();
 
     this.setFitMap();
   },
@@ -93,11 +109,12 @@ export default {
     },
     createLayerController() {
       const baseLayers = {};
-      const overlays = this.cfg.labelName.reduce((rs, label, key) => {
+      const overlays = this.userCfg.labelName.reduce((rs, label, key) => {
         rs[label] = this.layers[key];
         return rs;
       }, {});
-      return [baseLayers, overlays];
+      const controller = [baseLayers, overlays];
+      L.control.layers(...controller).addTo(this.map);
     },
     createLine({ st, dt, status }) {
       const bt = createCmpInstance(qButton, {
@@ -171,7 +188,7 @@ export default {
         ];
       }
       return [
-        ((stX + dtX) / 2) + 15,
+        ((stX + dtX) / 2) * 1.002,
         (stY + dtY) / 2,
       ];
     },
@@ -207,11 +224,12 @@ export default {
 <style scoped>
   /* Always set the map height explicitly to define the size of the div
     * element that contains the map. */
+  .map-group, #map{
+    height: 100%;
+    width: 100%;
+  }
   #map {
     z-index: 0;
-    height: 80vh;
-    width: 100%;
-    max-height: 500px;
     border-radius: 5px;
   }
 </style>

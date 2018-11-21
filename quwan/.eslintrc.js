@@ -22,7 +22,8 @@ module.exports = {
     "no-param-reassign": [2, { props: false }],
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
     "camelcase": [0],
-    "no-underscore-dangle": [0]
+    "no-underscore-dangle": [0],
+    "no-param-reassign": 0
   },
   parserOptions: {
     parser: 'babel-eslint',

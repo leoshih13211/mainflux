@@ -26,7 +26,8 @@ export default {
 <style lang="scss" scoped>
   section{
     width: 100%;
-    height: 92vh;
+    height: 95vh;
+    // max-height: calc(100% - #{$topbar-min-height});
     display: flex;
   }
   .home{
@@ -41,5 +42,7 @@ export default {
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
+    overflow: auto;
+    align-content: flex-start;
   }
 </style>

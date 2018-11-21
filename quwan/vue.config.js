@@ -21,6 +21,17 @@ module.exports = {
 
     config.resolve.set('extensions', ['.js', '.json']);
   },
+  css: {
+    loaderOptions: {
+      sass: {
+        data: `
+          @import "@/scss/_variables.scss";
+          @import "@/scss/_mixin.scss";
+          @import "@/scss/_function.scss";
+        `,
+      },
+    },
+  },
   configureWebpack: (config) => {
     if (process.env.NODE_ENV === 'production') {
       console.log('config :', config);

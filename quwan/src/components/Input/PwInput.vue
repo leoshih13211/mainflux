@@ -9,7 +9,7 @@
 
 <script>
 import md5 from 'md5';
-import _InputProto from './_InputProto';
+import _InputProto from './_Input_Proto';
 
 export default {
   name: 'PwInput',

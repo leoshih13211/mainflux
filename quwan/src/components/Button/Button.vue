@@ -1,5 +1,5 @@
 <template>
-  <button :type="type" class="qButton">
+  <button :type="type" class="qButton" @click.stop="btnOnClick">
     <slot name="icon_front"/>
     <slot>
       <span class="btnName">{{ name }}</span>
@@ -19,6 +19,15 @@ export default {
     type: {
       type: String,
       default: 'button',
+    },
+  },
+  methods: {
+    btnOnClick(e) {
+      this.$emit('btnOnClick', {
+        event: e,
+        name: this.name,
+        type: this.type,
+      });
     },
   },
 };

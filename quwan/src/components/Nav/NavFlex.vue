@@ -3,9 +3,10 @@
     <a
       v-for="(nav, index) in navs"
       :class="{active: activeNav === nav.name}"
-      :key="index" class="flex-sm-fill text-sm-center nav-link"
-      href="#"
-      @click.stop="navOnClick(nav)">{{ nav.name }}</a>
+      :key="index"
+      class="flex-sm-fill text-sm-center nav-link"
+      href=""
+      @click.prevent.stop="navOnClick(nav)">{{ nav.name }}</a>
   </nav>
 </template>
 
@@ -32,7 +33,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-
-</style>

@@ -12,6 +12,7 @@ $theme-colors: (
   "primary": #2b3b52,
   "secondary": #17a2b8,
   "danger": #dc3545,
+  "warning": #ffc107,
   "success": #28a745,
   "info": #59B0EF,
 
@@ -21,4 +22,5 @@ $theme-font-size: 16px;
 $theme-font-weight: 400;
 $theme-font-family: Roboto,Helvetica,Arial,Sans-serif,Verdana,Tahoma;;
 
-$topbar-height: 8vh;
+$topbar-height: 5vh;
+$topbar-min-height: 60px;
