@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NavFlex :navs="navs" :active-nav="activeNav" @navOnClick="nsvOnClick"/>
+    <NavFlex :navs="navs" :active-nav="activeNav"/>
     <transition name="component-fade" mode="out-in">
       <router-view class="tabContent"/>
     </transition>
@@ -19,11 +19,12 @@ export default {
     return {
       navs: [
         { name: 'Overview', router: '/site/overview' },
-        { name: 'Device', router: 'device' },
-        { name: 'Gateway', router: '/site/gateway' },
-        { name: 'VPN' },
-        { name: 'Event Log', router: '/site/eventlog' },
-        { name: 'Summary Report' },
+        { name: 'Device', router: '/site/device' },
+        { name: 'Service', router: '/site/service' },
+        // { name: 'Gateway', router: '/site/gateway' },
+        // { name: 'VPN' },
+        { name: 'Device Log', router: '/site/deviceLog' },
+        // { name: 'Summary Report', router: '/site/report' },
       ],
       activeNav: 'Overview',
     };
@@ -35,10 +36,6 @@ export default {
     ...mapActions('Sidebar', [
       'setGroup',
     ]),
-    nsvOnClick(nav) {
-      console.log(nav);
-      // if (nav.router) this.$router.push(nav.router);
-    },
   },
 };
 </script>

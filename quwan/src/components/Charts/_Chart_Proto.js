@@ -1,26 +1,25 @@
-import Color from 'color';
 import Chart from 'chart.js';
-import { palette } from 'common/utilities';
+import { palette, colorFade, colorLighten } from 'common/utilities';
 
 const COLORS = [
   'blue',
-  'indigo',
-  'cyan',
-  'teal',
+  'red',
   'green',
-  'lime',
   'yellow',
   'orange',
-  'red',
+  'indigo',
   'pink',
+  'cyan',
+  'lime',
   'grape',
+  'teal',
   'violet',
 ];
 
 function pickColor(idx) {
   const colorIdx = idx % COLORS.length;
   const color = COLORS[colorIdx];
-  const spectrum = 5 - Math.floor(idx % COLORS.length);
+  const spectrum = 4;
 
   return palette(color, spectrum);
 }
@@ -34,7 +33,7 @@ const setDefaultColor = {
 
         if (!dataset.backgroundColor) {
           dataset.backgroundColor = dataset.borderColor.map((hex) => {
-            const color = new Color(hex).alpha(0.5);
+            const color = colorLighten(hex, 0.3);
             return color.string();
           });
         }
@@ -46,7 +45,8 @@ const setDefaultColor = {
       if (!dataset.borderColor) {
         dataset.borderColor = pickColor(idx);
         if (!dataset.backgroundColor) {
-          dataset.backgroundColor = dataset.borderColor;
+          if (chart.config.fill) dataset.backgroundColor = colorFade(dataset.borderColor, 0.8);
+          else dataset.backgroundColor = dataset.borderColor;
         }
       }
     });

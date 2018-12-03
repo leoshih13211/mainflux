@@ -1,0 +1,61 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "generated": 1395197681000,
+    "url": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_week.geojsonp",
+    "title": "USGS Magnitude 1.0+ Earthquakes, Past Week",
+    "status": 200,
+    "api": "1.0.13",
+    "count": 1021
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "mag": 3.3,
+        "place": "34km SSW of Ferndale, California",
+        "time": 1395196367200,
+        "updated": 1395197427537,
+        "tz": -420,
+        "url": "http://earthquake.usgs.gov/earthquakes/eventpage/nc72187661",
+        "detail": "http://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/nc72187661.geojsonp",
+        "felt": 1,
+        "cdi": 2,
+        "mmi": null,
+        "alert": null,
+        "status": "AUTOMATIC",
+        "tsunami": null,
+        "sig": 168,
+        "net": "nc",
+        "code": "72187661",
+        "ids": ",nc72187661,",
+        "sources": ",nc,",
+        "types": ",dyfi,general-link,geoserve,nearby-cities,origin,phase-data,scitech-link,",
+        "nst": null,
+        "dmin": 0.14373045,
+        "rms": 0.14,
+        "gap": 259.2,
+        "magType": "Ml",
+        "type": "earthquake",
+        "title": "M 3.3 - 34km SSW of Ferndale, California"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.4685,
+          40.3087,
+          8.7
+        ]
+      },
+      "id": "nc72187661"
+    }
+  ],
+  "bbox": [
+    -179.463,
+    -60.7674,
+    -2.9,
+    178.4321,
+    67.0311,
+    609.13
+  ]
+}

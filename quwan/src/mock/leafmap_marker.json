@@ -1,0 +1,15 @@
+{
+  "markerGroup": [
+    [
+      {
+        "pos": [
+          25.0599030,
+          121.6369863
+        ],
+        "popupText": "This is Xizhi, CO."
+      }
+    ]
+  ],
+  "fitMap": "marker",
+  "showController": false
+}

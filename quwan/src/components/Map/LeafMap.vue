@@ -14,7 +14,7 @@ import L from 'leaflet';
 import 'leaflet-curve';
 import { cloneDeep } from 'lodash';
 import { createCmpInstance } from 'common/utilities';
-import qButton from './Button/Button.vue';
+import qButton from 'components/Button/Button.vue';
 
 export default {
   name: 'Map',

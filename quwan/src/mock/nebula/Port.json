@@ -1,0 +1,126 @@
+  {
+    "overridePort": true,
+    "devType": "QuWAN300",
+    "wanSetting": [
+      {
+        "port": "P2",
+        "role": "Primary",
+        "zone": "WAN1",
+        "enable": true,
+        "portType": "rj45",
+        "bandwidth": 1,
+        "transport": "Internet",
+        "permission": 1,
+        "publicIpType": "dhcp",
+        "bandwidthUnit": "gbps",
+        "customAddress": "",
+        "connectivityCheck": "none"
+      },
+      {
+        "port": "P3",
+        "role": "Primary",
+        "zone": "WAN2",
+        "enable": false,
+        "portType": "rj45",
+        "bandwidth": 1,
+        "transport": "Internet",
+        "permission": 1,
+        "publicIpType": "dhcp",
+        "bandwidthUnit": "gbps",
+        "customAddress": "",
+        "connectivityCheck": "none"
+      }
+    ],
+    "lanSetting": [
+      {
+        "port": "P4",
+        "zones": [
+          {
+            "vlanId": 1,
+            "zoneId": 7,
+            "zoneName": "Employee"
+          },
+          {
+            "vlanId": 64,
+            "zoneId": 9,
+            "zoneName": "Guest"
+          }
+        ],
+        "enable": true,
+        "portType": "rj45",
+        "permission": 2
+      },
+      {
+        "port": "P5",
+        "zones": [
+          {
+            "vlanId": 1,
+            "zoneId": 7,
+            "zoneName": "Employee"
+          },
+          {
+            "vlanId": 64,
+            "zoneId": 9,
+            "zoneName": "Guest"
+          }
+        ],
+        "enable": true,
+        "portType": "rj45",
+        "permission": 2
+      },
+      {
+        "port": "P6",
+        "zones": [
+          {
+            "vlanId": 1,
+            "zoneId": 7,
+            "zoneName": "Employee"
+          },
+          {
+            "vlanId": 64,
+            "zoneId": 9,
+            "zoneName": "Guest"
+          }
+        ],
+        "enable": true,
+        "portType": "rj45",
+        "permission": 2
+      },
+      {
+        "port": "P7",
+        "zones": [
+          {
+            "vlanId": 1,
+            "zoneId": 7,
+            "zoneName": "Employee"
+          },
+          {
+            "vlanId": 64,
+            "zoneId": 9,
+            "zoneName": "Guest"
+          }
+        ],
+        "enable": false,
+        "portType": "rj45",
+        "permission": 2
+      },
+      {
+        "port": "P8",
+        "zones": [
+          {
+            "vlanId": 1,
+            "zoneId": 7,
+            "zoneName": "Employee"
+          },
+          {
+            "vlanId": 64,
+            "zoneId": 9,
+            "zoneName": "Guest"
+          }
+        ],
+        "enable": true,
+        "portType": "rj45",
+        "permission": 1
+      }
+    ]
+  }

@@ -5,13 +5,13 @@
       <div class="subTitle"/>
       <div class="items">
         <div class="item" title="Account">
-          <font-awesome-icon icon="user" alt="logout"/>
+          <font-awesome-icon icon="user" alt="user"/>
         </div>
         <div class="item" title="Help">
-          <font-awesome-icon icon="question-circle" alt="logout"/>
+          <font-awesome-icon icon="question-circle" alt="questionCircle"/>
         </div>
         <div class="item" title="logout" @click="logout">
-          <font-awesome-icon icon="sign-out-alt" alt="logout"/>
+          <font-awesome-icon icon="sign-out-alt" alt="signOutAlt"/>
         </div>
       </div>
     </div>

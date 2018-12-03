@@ -2,11 +2,15 @@
   <tbody>
     <tr v-for="(row, rid) in data"
         :id="row.id"
-        :key="rid">
+        :key="row.id">
       <td v-for="(head, hi) in heads"
-          :id="`${row.id}_${head.id}`"
+          :id="`${rid+1}_${head.id}`"
           :key="hi">
-        <SpCell v-if="head.spCell" :component-id="head.spCell" :row-data="row"/>
+        <SpCell
+          v-if="head.spCell"
+          :component-id="head.spCell"
+          :row-data="row"
+          @spCellEmit="spCellEmit"/>
         <span v-else>{{ row[head.id] }}</span>
       </td>
     </tr>
@@ -36,6 +40,11 @@ export default {
   computed: {
     emptyData() {
       return !this.data.length;
+    },
+  },
+  methods: {
+    spCellEmit(payload) {
+      this.$emit('spCellEmit', payload);
     },
   },
 };

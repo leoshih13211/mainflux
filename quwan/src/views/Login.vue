@@ -4,10 +4,10 @@
       <h1>QuWan Cloud</h1>
     </div>
     <div class="content">
-      <qButtonIcon
-        :front-icon="loginBtnLogo"
+      <ButtonIcon
+        :front-image="loginBtnLogo"
         name="Login"
-        class="btn qButton-info loginBtn"
+        class="btn qBtn-info loginBtn"
         @click.native="login"/>
     </div>
   </div>
@@ -18,12 +18,12 @@ import { mapActions } from 'vuex';
 import cookieManager from 'services/cookieManager';
 import auth from 'services/auth';
 import logoWhiteLogo from 'assets/logo_myqnapcloud.png';
-import qButtonIcon from 'components/Button/ButtonIcon.vue';
+import ButtonIcon from 'components/Button/ButtonIcon.vue';
 
 export default {
   name: 'Login',
   components: {
-    qButtonIcon,
+    ButtonIcon,
   },
   data() {
     return {

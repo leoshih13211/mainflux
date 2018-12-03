@@ -1,5 +1,5 @@
 <template>
-  <canvas ref="myPieChart"/>
+  <canvas ref="myLineChart"/>
 </template>
 
 <script>
@@ -10,13 +10,13 @@ import _ChartProto from './_Chart_Proto';
 export default {
   extends: _ChartProto,
   props: {
-    areaChartData: {
+    areaChartCfg: {
       type: Object,
       default: () => ({}),
     },
-    datasets: {
-      type: Array,
-      default: () => [],
+    updateTime: {
+      type: Number,
+      default: 0,
     },
   },
   data() {
@@ -24,31 +24,31 @@ export default {
       config: {
         type: 'line',
         data: {},
+        fill: true, // non-offical attrbute
       },
     };
   },
   watch: {
-    datasets: {
-      handler() {
-        this.myPieChart.update();
-      },
-      deep: true,
+    updateTime() {
+      this.myLineChart.options = this.areaChartCfg.options;
+      this.myLineChart.update();
     },
   },
   mounted() {
-    const ctx = this.$refs.myPieChart.getContext('2d');
+    const ctx = this.$refs.myLineChart.getContext('2d');
     const config = this.initCfg();
 
-    this.myPieChart = new Chart(ctx, config);
+    this.myLineChart = new Chart(ctx, config);
+    console.log(this.myLineChart);
   },
   methods: {
     initCfg() {
       const config = cloneDeep(this.config);
       config.data = {
-        datasets: this.areaChartData.datasets,
-        labels: this.areaChartData.labels,
+        datasets: this.areaChartCfg.datasets,
+        labels: this.areaChartCfg.labels,
       };
-      config.options = this.areaChartData.options;
+      config.options = this.areaChartCfg.options;
 
       return config;
     },

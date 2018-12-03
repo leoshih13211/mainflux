@@ -1,0 +1,252 @@
+[
+  {
+    "timestamp": 1542958751000,
+    "severity": 6,
+    "category": "DHCP",
+    "logmessage": "Requested 10.0.3.4 from (00:0C:29:EF:4F:75)",
+    "srcip": "0.0.0.0",
+    "dstip": "0.0.0.0",
+    "proto_name": "",
+    "note": "DHCP Request"
+  },
+  {
+    "timestamp": 1542958751000,
+    "severity": 6,
+    "category": "DHCP",
+    "logmessage": "DHCP server assigned 10.0.3.4 to (00:0C:29:EF:4F:75)",
+    "srcip": "0.0.0.0",
+    "dstip": "0.0.0.0",
+    "proto_name": "",
+    "note": "DHCP ACK"
+  },
+  {
+    "timestamp": 1542958670000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "The cookie pair is : 0xbded0eb7e22f0cca / 0x5562f28b239e0319",
+    "srcip": "192.168.11.36",
+    "dstip": "192.168.11.39",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  },
+  {
+    "timestamp": 1542958670000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "Tunnel [sa00012WAN1-00014WAN1:sa00012WAN1-00014WAN1:0xe6f2092b] is disconnected",
+    "srcip": "192.168.11.36",
+    "dstip": "192.168.11.39",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  },
+  {
+    "timestamp": 1542958670000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "[info] Recv:[DEL]",
+    "srcip": "192.168.11.39",
+    "dstip": "192.168.11.36",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  },
+  {
+    "timestamp": 1542958670000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "The cookie pair is : 0xbded0eb7e22f0cca / 0x5562f28b239e0319",
+    "srcip": "192.168.11.36",
+    "dstip": "192.168.11.39",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  },
+  {
+    "timestamp": 1542958670000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "[info] Send:",
+    "srcip": "192.168.11.36",
+    "dstip": "192.168.11.39",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  },
+  {
+    "timestamp": 1542958670000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "The cookie pair is : 0x5562f28b239e0319 / 0xbded0eb7e22f0cca",
+    "srcip": "192.168.11.39",
+    "dstip": "192.168.11.36",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  },
+  {
+    "timestamp": 1542958662000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "[CHILD] Send:[Nonce Rekey_sa][NOTIFY][SAi][NONCE][KE][TSi][TSr][NOTIFY][NOTIFY]",
+    "srcip": "192.168.11.36",
+    "dstip": "192.168.11.39",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  },
+  {
+    "timestamp": 1542958662000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "[Initiator:192.168.11.36][Responder:192.168.11.39]",
+    "srcip": "192.168.11.36",
+    "dstip": "192.168.11.39",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  },
+  {
+    "timestamp": 1542958662000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "The cookie pair is : 0xbded0eb7e22f0cca / 0x5562f28b239e0319",
+    "srcip": "192.168.11.36",
+    "dstip": "192.168.11.39",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  },
+  {
+    "timestamp": 1542958662000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "[ESP aes-cbc|hmac-sha1-96][SPI 0x04ea7443|0xf37a23ed][PFS:DH2][Lifetime 25440]",
+    "srcip": "192.168.11.36",
+    "dstip": "192.168.11.39",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  },
+  {
+    "timestamp": 1542958662000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "The cookie pair is : 0xbded0eb7e22f0cca / 0x5562f28b239e0319",
+    "srcip": "192.168.11.36",
+    "dstip": "192.168.11.39",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  },
+  {
+    "timestamp": 1542958662000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "The cookie pair is : 0xbded0eb7e22f0cca / 0x5562f28b239e0319",
+    "srcip": "192.168.11.36",
+    "dstip": "192.168.11.39",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  },
+  {
+    "timestamp": 1542958662000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "[CHILD] Recv: [SA][NONCE][KE][TSi][TSr][NOTIFY][NOTIFY]",
+    "srcip": "192.168.11.36",
+    "dstip": "192.168.11.39",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  },
+  {
+    "timestamp": 1542958662000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "The cookie pair is : 0xbded0eb7e22f0cca / 0x5562f28b239e0319",
+    "srcip": "192.168.11.36",
+    "dstip": "192.168.11.39",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  },
+  {
+    "timestamp": 1542958662000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "[Policy: ipv4(0.0.0.0-255.255.255.255)-ipv4(0.0.0.0-255.255.255.255)]",
+    "srcip": "192.168.11.36",
+    "dstip": "192.168.11.39",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  },
+  {
+    "timestamp": 1542958662000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "The cookie pair is : 0xbded0eb7e22f0cca / 0x5562f28b239e0319",
+    "srcip": "192.168.11.36",
+    "dstip": "192.168.11.39",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  },
+  {
+    "timestamp": 1542958662000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "The cookie pair is : 0xbded0eb7e22f0cca / 0x5562f28b239e0319",
+    "srcip": "192.168.11.36",
+    "dstip": "192.168.11.39",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  },
+  {
+    "timestamp": 1542958662000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "Tunnel [sa00012WAN1-00014WAN1:sa00012WAN1-00014WAN1:0xf37a23ed] rekeyed successfully",
+    "srcip": "192.168.11.36",
+    "dstip": "192.168.11.39",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  },
+  {
+    "timestamp": 1542957687000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "Tunnel [sa00012WAN2-00013WAN1:sa00012WAN2-00013WAN1:0xa6911e60] is disconnected",
+    "srcip": "192.168.12.4",
+    "dstip": "192.168.11.34",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  },
+  {
+    "timestamp": 1542957687000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "[info] Recv:",
+    "srcip": "192.168.11.34",
+    "dstip": "192.168.12.4",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  },
+  {
+    "timestamp": 1542957687000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "The cookie pair is : 0x6e5d8b963087ded2 / 0x0821742703b1448c",
+    "srcip": "192.168.12.4",
+    "dstip": "192.168.11.34",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  },
+  {
+    "timestamp": 1542957687000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "The cookie pair is : 0x0821742703b1448c / 0x6e5d8b963087ded2",
+    "srcip": "192.168.11.34",
+    "dstip": "192.168.12.4",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  },
+  {
+    "timestamp": 1542957687000,
+    "severity": 6,
+    "category": "IKE",
+    "logmessage": "The cookie pair is : 0x6e5d8b963087ded2 / 0x0821742703b1448c",
+    "srcip": "192.168.12.4",
+    "dstip": "192.168.11.34",
+    "proto_name": "",
+    "note": "IKE_LOG"
+  }
+]

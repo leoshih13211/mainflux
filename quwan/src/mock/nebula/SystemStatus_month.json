@@ -1,0 +1,1632 @@
+{
+  "ifNameList": [
+    "Memory",
+    "Sessions",
+    "Core-0",
+    "Core-1",
+    "Core-2",
+    "Core-3"
+  ],
+  "data": [
+    {
+      "unixtime": 1543214400000,
+      "Core-2": 21.0,
+      "Core-3": 2.0,
+      "Core-0": 20.0,
+      "Core-1": 19.0,
+      "Memory": 28.0,
+      "Sessions": 51.0
+    },
+    {
+      "unixtime": 1543211040000,
+      "Core-2": 21.0,
+      "Core-3": 3.0,
+      "Core-0": 20.0,
+      "Core-1": 19.0,
+      "Memory": 28.0,
+      "Sessions": 65.0
+    },
+    {
+      "unixtime": 1543207680000,
+      "Core-2": 21.0,
+      "Core-3": 8.0,
+      "Core-0": 19.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 68.0
+    },
+    {
+      "unixtime": 1543204320000,
+      "Core-2": 21.0,
+      "Core-3": 3.0,
+      "Core-0": 20.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 60.0
+    },
+    {
+      "unixtime": 1543200960000,
+      "Core-2": 20.0,
+      "Core-3": 21.0,
+      "Core-0": 20.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 63.0
+    },
+    {
+      "unixtime": 1543197600000,
+      "Core-2": 11.0,
+      "Core-3": 3.0,
+      "Core-0": 25.0,
+      "Core-1": 11.0,
+      "Memory": 29.0,
+      "Sessions": 83.0
+    },
+    {
+      "unixtime": 1543194240000,
+      "Core-2": 11.0,
+      "Core-3": 3.0,
+      "Core-0": 19.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 66.0
+    },
+    {
+      "unixtime": 1543190880000,
+      "Core-2": 20.0,
+      "Core-3": 3.0,
+      "Core-0": 19.0,
+      "Core-1": 18.0,
+      "Memory": 29.0,
+      "Sessions": 68.0
+    },
+    {
+      "unixtime": 1543187520000,
+      "Core-2": 3.0,
+      "Core-3": 21.0,
+      "Core-0": 19.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 57.0
+    },
+    {
+      "unixtime": 1543184160000,
+      "Core-2": 20.0,
+      "Core-3": 21.0,
+      "Core-0": 19.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 58.0
+    },
+    {
+      "unixtime": 1543180800000,
+      "Core-2": 21.0,
+      "Core-3": 10.0,
+      "Core-0": 19.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 69.0
+    },
+    {
+      "unixtime": 1543177440000,
+      "Core-2": 21.0,
+      "Core-3": 6.0,
+      "Core-0": 19.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 71.0
+    },
+    {
+      "unixtime": 1543174080000,
+      "Core-2": 20.0,
+      "Core-3": 2.0,
+      "Core-0": 20.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 66.0
+    },
+    {
+      "unixtime": 1543170720000,
+      "Core-2": 20.0,
+      "Core-3": 21.0,
+      "Core-0": 19.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 88.0
+    },
+    {
+      "unixtime": 1543167360000,
+      "Core-2": 20.0,
+      "Core-3": 21.0,
+      "Core-0": 19.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 66.0
+    },
+    {
+      "unixtime": 1543164000000,
+      "Core-2": 20.0,
+      "Core-3": 4.0,
+      "Core-0": 19.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 67.0
+    },
+    {
+      "unixtime": 1543160640000,
+      "Core-2": 20.0,
+      "Core-3": 21.0,
+      "Core-0": 19.0,
+      "Core-1": 19.0,
+      "Memory": 28.0,
+      "Sessions": 62.0
+    },
+    {
+      "unixtime": 1543157280000,
+      "Core-2": 20.0,
+      "Core-3": 20.0,
+      "Core-0": 19.0,
+      "Core-1": 18.0,
+      "Memory": 28.0,
+      "Sessions": 75.0
+    },
+    {
+      "unixtime": 1543153920000,
+      "Core-2": 21.0,
+      "Core-3": 6.0,
+      "Core-0": 19.0,
+      "Core-1": 18.0,
+      "Memory": 28.0,
+      "Sessions": 64.0
+    },
+    {
+      "unixtime": 1543150560000,
+      "Core-2": 21.0,
+      "Core-3": 18.0,
+      "Core-0": 19.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 65.0
+    },
+    {
+      "unixtime": 1543147200000,
+      "Core-2": 20.0,
+      "Core-3": 19.0,
+      "Core-0": 19.0,
+      "Core-1": 18.0,
+      "Memory": 29.0,
+      "Sessions": 63.0
+    },
+    {
+      "unixtime": 1543143840000,
+      "Core-2": 21.0,
+      "Core-3": 3.0,
+      "Core-0": 19.0,
+      "Core-1": 3.0,
+      "Memory": 29.0,
+      "Sessions": 61.0
+    },
+    {
+      "unixtime": 1543140480000,
+      "Core-2": 20.0,
+      "Core-3": 5.0,
+      "Core-0": 19.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 57.0
+    },
+    {
+      "unixtime": 1543137120000,
+      "Core-2": 12.0,
+      "Core-3": 9.0,
+      "Core-0": 19.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 66.0
+    },
+    {
+      "unixtime": 1543133760000,
+      "Core-2": 20.0,
+      "Core-3": 21.0,
+      "Core-0": 19.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 57.0
+    },
+    {
+      "unixtime": 1543130400000,
+      "Core-2": 20.0,
+      "Core-3": 4.0,
+      "Core-0": 19.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 57.0
+    },
+    {
+      "unixtime": 1543127040000,
+      "Core-2": 21.0,
+      "Core-3": 4.0,
+      "Core-0": 19.0,
+      "Core-1": 18.0,
+      "Memory": 29.0,
+      "Sessions": 68.0
+    },
+    {
+      "unixtime": 1543123680000,
+      "Core-2": 20.0,
+      "Core-3": 3.0,
+      "Core-0": 19.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 62.0
+    },
+    {
+      "unixtime": 1543120320000,
+      "Core-2": 20.0,
+      "Core-3": 4.0,
+      "Core-0": 19.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 64.0
+    },
+    {
+      "unixtime": 1543116960000,
+      "Core-2": 18.0,
+      "Core-3": 3.0,
+      "Core-0": 18.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 55.0
+    },
+    {
+      "unixtime": 1543113600000,
+      "Core-2": 21.0,
+      "Core-3": 20.0,
+      "Core-0": 9.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 59.0
+    },
+    {
+      "unixtime": 1543110240000,
+      "Core-2": 20.0,
+      "Core-3": 21.0,
+      "Core-0": 15.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 58.0
+    },
+    {
+      "unixtime": 1543106880000,
+      "Core-2": 20.0,
+      "Core-3": 3.0,
+      "Core-0": 17.0,
+      "Core-1": 19.0,
+      "Memory": 29.0,
+      "Sessions": 62.0
+    },
+    {
+      "unixtime": 1543103520000,
+      "Core-2": 21.0,
+      "Core-3": 11.0,
+      "Core-0": 14.0,
+      "Core-1": 18.0,
+      "Memory": 28.0,
+      "Sessions": 62.0
+    },
+    {
+      "unixtime": 1543100160000,
+      "Core-2": 20.0,
+      "Core-3": 3.0,
+      "Core-0": 5.0,
+      "Core-1": 19.0,
+      "Memory": 28.0,
+      "Sessions": 57.0
+    },
+    {
+      "unixtime": 1543096800000,
+      "Core-2": 20.0,
+      "Core-3": 8.0,
+      "Core-0": 19.0,
+      "Core-1": 19.0,
+      "Memory": 28.0,
+      "Sessions": 62.0
+    },
+    {
+      "unixtime": 1543093440000,
+      "Core-2": 20.0,
+      "Core-3": 15.0,
+      "Core-0": 18.0,
+      "Core-1": 14.0,
+      "Memory": 28.0,
+      "Sessions": 66.0
+    },
+    {
+      "unixtime": 1543090080000,
+      "Core-2": 20.0,
+      "Core-3": 3.0,
+      "Core-0": 18.0,
+      "Core-1": 18.0,
+      "Memory": 28.0,
+      "Sessions": 58.0
+    },
+    {
+      "unixtime": 1543086720000,
+      "Core-2": 20.0,
+      "Core-3": 12.0,
+      "Core-0": 19.0,
+      "Core-1": 15.0,
+      "Memory": 28.0,
+      "Sessions": 60.0
+    },
+    {
+      "unixtime": 1543083360000,
+      "Core-2": 17.0,
+      "Core-3": 20.0,
+      "Core-0": 19.0,
+      "Core-1": 19.0,
+      "Memory": 28.0,
+      "Sessions": 69.0
+    },
+    {
+      "unixtime": 1543080000000,
+      "Core-2": 20.0,
+      "Core-3": 4.0,
+      "Core-0": 14.0,
+      "Core-1": 18.0,
+      "Memory": 28.0,
+      "Sessions": 60.0
+    },
+    {
+      "unixtime": 1543076640000,
+      "Core-2": 6.0,
+      "Core-3": 3.0,
+      "Core-0": 19.0,
+      "Core-1": 18.0,
+      "Memory": 28.0,
+      "Sessions": 63.0
+    },
+    {
+      "unixtime": 1543073280000,
+      "Core-2": 12.0,
+      "Core-3": 12.0,
+      "Core-0": 16.0,
+      "Core-1": 18.0,
+      "Memory": 28.0,
+      "Sessions": 55.0
+    },
+    {
+      "unixtime": 1543069920000,
+      "Core-2": 16.0,
+      "Core-3": 2.0,
+      "Core-0": 16.0,
+      "Core-1": 19.0,
+      "Memory": 28.0,
+      "Sessions": 67.0
+    },
+    {
+      "unixtime": 1543066560000,
+      "Core-2": 9.0,
+      "Core-3": 6.0,
+      "Core-0": 10.0,
+      "Core-1": 17.0,
+      "Memory": 28.0,
+      "Sessions": 58.0
+    },
+    {
+      "unixtime": 1543063200000,
+      "Core-2": 20.0,
+      "Core-3": 17.0,
+      "Core-0": 19.0,
+      "Core-1": 5.0,
+      "Memory": 28.0,
+      "Sessions": 60.0
+    },
+    {
+      "unixtime": 1543059840000,
+      "Core-2": 8.0,
+      "Core-3": 7.0,
+      "Core-0": 18.0,
+      "Core-1": 4.0,
+      "Memory": 28.0,
+      "Sessions": 63.0
+    },
+    {
+      "unixtime": 1543056480000,
+      "Core-2": 16.0,
+      "Core-3": 5.0,
+      "Core-0": 15.0,
+      "Core-1": 16.0,
+      "Memory": 28.0,
+      "Sessions": 59.0
+    },
+    {
+      "unixtime": 1543053120000,
+      "Core-2": 17.0,
+      "Core-3": 3.0,
+      "Core-0": 3.0,
+      "Core-1": 17.0,
+      "Memory": 28.0,
+      "Sessions": 66.0
+    },
+    {
+      "unixtime": 1543049760000,
+      "Core-2": 18.0,
+      "Core-3": 3.0,
+      "Core-0": 9.0,
+      "Core-1": 14.0,
+      "Memory": 28.0,
+      "Sessions": 85.0
+    },
+    {
+      "unixtime": 1543046400000,
+      "Core-2": 5.0,
+      "Core-3": 9.0,
+      "Core-0": 16.0,
+      "Core-1": 7.0,
+      "Memory": 28.0,
+      "Sessions": 68.0
+    },
+    {
+      "unixtime": 1543043040000,
+      "Core-2": 17.0,
+      "Core-3": 4.0,
+      "Core-0": 10.0,
+      "Core-1": 14.0,
+      "Memory": 28.0,
+      "Sessions": 79.0
+    },
+    {
+      "unixtime": 1543039680000,
+      "Core-2": 15.0,
+      "Core-3": 3.0,
+      "Core-0": 8.0,
+      "Core-1": 13.0,
+      "Memory": 28.0,
+      "Sessions": 78.0
+    },
+    {
+      "unixtime": 1543036320000,
+      "Core-2": 8.0,
+      "Core-3": 4.0,
+      "Core-0": 10.0,
+      "Core-1": 14.0,
+      "Memory": 28.0,
+      "Sessions": 73.0
+    },
+    {
+      "unixtime": 1543032960000,
+      "Core-2": 9.0,
+      "Core-3": 2.0,
+      "Core-0": 12.0,
+      "Core-1": 11.0,
+      "Memory": 28.0,
+      "Sessions": 65.0
+    },
+    {
+      "unixtime": 1543029600000,
+      "Core-2": 9.0,
+      "Core-3": 3.0,
+      "Core-0": 10.0,
+      "Core-1": 8.0,
+      "Memory": 27.0,
+      "Sessions": 72.0
+    },
+    {
+      "unixtime": 1543026240000,
+      "Core-2": 11.0,
+      "Core-3": 3.0,
+      "Core-0": 3.0,
+      "Core-1": 12.0,
+      "Memory": 27.0,
+      "Sessions": 65.0
+    },
+    {
+      "unixtime": 1543022880000,
+      "Core-2": 6.0,
+      "Core-3": 4.0,
+      "Core-0": 6.0,
+      "Core-1": 10.0,
+      "Memory": 27.0,
+      "Sessions": 69.0
+    },
+    {
+      "unixtime": 1543019520000,
+      "Core-2": 11.0,
+      "Core-3": 2.0,
+      "Core-0": 3.0,
+      "Core-1": 9.0,
+      "Memory": 27.0,
+      "Sessions": 72.0
+    },
+    {
+      "unixtime": 1543016160000,
+      "Core-2": 12.0,
+      "Core-3": 4.0,
+      "Core-0": 7.0,
+      "Core-1": 2.0,
+      "Memory": 27.0,
+      "Sessions": 72.0
+    },
+    {
+      "unixtime": 1543012800000,
+      "Core-2": 10.0,
+      "Core-3": 4.0,
+      "Core-0": 6.0,
+      "Core-1": 7.0,
+      "Memory": 27.0,
+      "Sessions": 76.0
+    },
+    {
+      "unixtime": 1543009440000,
+      "Core-2": 8.0,
+      "Core-3": 5.0,
+      "Core-0": 3.0,
+      "Core-1": 5.0,
+      "Memory": 27.0,
+      "Sessions": 67.0
+    },
+    {
+      "unixtime": 1543006080000,
+      "Core-2": 7.0,
+      "Core-3": 3.0,
+      "Core-0": 7.0,
+      "Core-1": 3.0,
+      "Memory": 27.0,
+      "Sessions": 77.0
+    },
+    {
+      "unixtime": 1543002720000,
+      "Core-2": 4.0,
+      "Core-3": 4.0,
+      "Core-0": 4.0,
+      "Core-1": 6.0,
+      "Memory": 27.0,
+      "Sessions": 73.0
+    },
+    {
+      "unixtime": 1542999360000,
+      "Core-2": 8.0,
+      "Core-3": 3.0,
+      "Core-0": 3.0,
+      "Core-1": 5.0,
+      "Memory": 27.0,
+      "Sessions": 70.0
+    },
+    {
+      "unixtime": 1542996000000,
+      "Core-2": 4.0,
+      "Core-3": 3.0,
+      "Core-0": 5.0,
+      "Core-1": 3.0,
+      "Memory": 27.0,
+      "Sessions": 79.0
+    },
+    {
+      "unixtime": 1542992640000,
+      "Core-2": 4.0,
+      "Core-3": 4.0,
+      "Core-0": 4.0,
+      "Core-1": 6.0,
+      "Memory": 27.0,
+      "Sessions": 84.0
+    },
+    {
+      "unixtime": 1542989280000,
+      "Core-2": 4.0,
+      "Core-3": 3.0,
+      "Core-0": 5.0,
+      "Core-1": 2.0,
+      "Memory": 27.0,
+      "Sessions": 74.0
+    },
+    {
+      "unixtime": 1542985920000,
+      "Core-2": 3.0,
+      "Core-3": 4.0,
+      "Core-0": 4.0,
+      "Core-1": 5.0,
+      "Memory": 27.0,
+      "Sessions": 79.0
+    },
+    {
+      "unixtime": 1542982560000,
+      "Core-2": 5.0,
+      "Core-3": 3.0,
+      "Core-0": 4.0,
+      "Core-1": 2.0,
+      "Memory": 27.0,
+      "Sessions": 73.0
+    },
+    {
+      "unixtime": 1542979200000,
+      "Core-2": 3.0,
+      "Core-3": 3.0,
+      "Core-0": 4.0,
+      "Core-1": 2.0,
+      "Memory": 27.0,
+      "Sessions": 76.0
+    },
+    {
+      "unixtime": 1542975840000,
+      "Core-2": 5.0,
+      "Core-3": 3.0,
+      "Core-0": 3.0,
+      "Core-1": 3.0,
+      "Memory": 27.0,
+      "Sessions": 81.0
+    },
+    {
+      "unixtime": 1542972480000,
+      "Core-2": 2.0,
+      "Core-3": 3.0,
+      "Core-0": 3.0,
+      "Core-1": 2.0,
+      "Memory": 27.0,
+      "Sessions": 70.0
+    },
+    {
+      "unixtime": 1542969120000,
+      "Core-2": 15.0,
+      "Core-3": 8.0,
+      "Core-0": 4.0,
+      "Core-1": 3.0,
+      "Memory": 27.0,
+      "Sessions": 71.0
+    },
+    {
+      "unixtime": 1542965760000,
+      "Core-2": 68.0,
+      "Core-3": 52.0,
+      "Core-0": 62.0,
+      "Core-1": 66.0,
+      "Memory": 29.0,
+      "Sessions": 189.0
+    },
+    {
+      "unixtime": 1542962400000,
+      "Core-2": 3.0,
+      "Core-3": 4.0,
+      "Core-0": 5.0,
+      "Core-1": 4.0,
+      "Memory": 29.0,
+      "Sessions": 73.0
+    },
+    {
+      "unixtime": 1542959040000,
+      "Core-2": 3.0,
+      "Core-3": 3.0,
+      "Core-0": 2.0,
+      "Core-1": 2.0,
+      "Memory": 29.0,
+      "Sessions": 68.0
+    },
+    {
+      "unixtime": 1542955680000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 79.0
+    },
+    {
+      "unixtime": 1542952320000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 70.0
+    },
+    {
+      "unixtime": 1542948960000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 66.0
+    },
+    {
+      "unixtime": 1542945600000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 60.0
+    },
+    {
+      "unixtime": 1542942240000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 30.0,
+      "Sessions": 111.0
+    },
+    {
+      "unixtime": 1542938880000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 66.0
+    },
+    {
+      "unixtime": 1542935520000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 82.0
+    },
+    {
+      "unixtime": 1542932160000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 77.0
+    },
+    {
+      "unixtime": 1542928800000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 79.0
+    },
+    {
+      "unixtime": 1542925440000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 62.0
+    },
+    {
+      "unixtime": 1542922080000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 56.0
+    },
+    {
+      "unixtime": 1542918720000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 75.0
+    },
+    {
+      "unixtime": 1542915360000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 67.0
+    },
+    {
+      "unixtime": 1542912000000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 75.0
+    },
+    {
+      "unixtime": 1542908640000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 76.0
+    },
+    {
+      "unixtime": 1542905280000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 74.0
+    },
+    {
+      "unixtime": 1542901920000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 71.0
+    },
+    {
+      "unixtime": 1542898560000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 77.0
+    },
+    {
+      "unixtime": 1542895200000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 70.0
+    },
+    {
+      "unixtime": 1542891840000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 74.0
+    },
+    {
+      "unixtime": 1542888480000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 69.0
+    },
+    {
+      "unixtime": 1542885120000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 71.0
+    },
+    {
+      "unixtime": 1542881760000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 70.0
+    },
+    {
+      "unixtime": 1542878400000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 76.0
+    },
+    {
+      "unixtime": 1542875040000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 65.0
+    },
+    {
+      "unixtime": 1542871680000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 59.0
+    },
+    {
+      "unixtime": 1542868320000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 72.0
+    },
+    {
+      "unixtime": 1542864960000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 63.0
+    },
+    {
+      "unixtime": 1542861600000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 68.0
+    },
+    {
+      "unixtime": 1542858240000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 62.0
+    },
+    {
+      "unixtime": 1542854880000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 71.0
+    },
+    {
+      "unixtime": 1542851520000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 64.0
+    },
+    {
+      "unixtime": 1542848160000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 83.0
+    },
+    {
+      "unixtime": 1542844800000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 115.0
+    },
+    {
+      "unixtime": 1542841440000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 63.0
+    },
+    {
+      "unixtime": 1542838080000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 60.0
+    },
+    {
+      "unixtime": 1542834720000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 75.0
+    },
+    {
+      "unixtime": 1542831360000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 63.0
+    },
+    {
+      "unixtime": 1542828000000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 67.0
+    },
+    {
+      "unixtime": 1542824640000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 67.0
+    },
+    {
+      "unixtime": 1542821280000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 57.0
+    },
+    {
+      "unixtime": 1542817920000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 63.0
+    },
+    {
+      "unixtime": 1542814560000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 65.0
+    },
+    {
+      "unixtime": 1542811200000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 70.0
+    },
+    {
+      "unixtime": 1542807840000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 63.0
+    },
+    {
+      "unixtime": 1542804480000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 64.0
+    },
+    {
+      "unixtime": 1542801120000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 65.0
+    },
+    {
+      "unixtime": 1542797760000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 61.0
+    },
+    {
+      "unixtime": 1542794400000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 61.0
+    },
+    {
+      "unixtime": 1542791040000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 68.0
+    },
+    {
+      "unixtime": 1542787680000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 61.0
+    },
+    {
+      "unixtime": 1542784320000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 59.0
+    },
+    {
+      "unixtime": 1542780960000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 78.0
+    },
+    {
+      "unixtime": 1542777600000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 64.0
+    },
+    {
+      "unixtime": 1542774240000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 64.0
+    },
+    {
+      "unixtime": 1542770880000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 66.0
+    },
+    {
+      "unixtime": 1542767520000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 66.0
+    },
+    {
+      "unixtime": 1542764160000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 147.0
+    },
+    {
+      "unixtime": 1542760800000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 82.0
+    },
+    {
+      "unixtime": 1542757440000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 136.0
+    },
+    {
+      "unixtime": 1542754080000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 71.0
+    },
+    {
+      "unixtime": 1542750720000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 75.0
+    },
+    {
+      "unixtime": 1542747360000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 79.0
+    },
+    {
+      "unixtime": 1542744000000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 76.0
+    },
+    {
+      "unixtime": 1542740640000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 84.0
+    },
+    {
+      "unixtime": 1542737280000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 88.0
+    },
+    {
+      "unixtime": 1542733920000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 74.0
+    },
+    {
+      "unixtime": 1542730560000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 75.0
+    },
+    {
+      "unixtime": 1542727200000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 111.0
+    },
+    {
+      "unixtime": 1542723840000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 63.0
+    },
+    {
+      "unixtime": 1542720480000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 69.0
+    },
+    {
+      "unixtime": 1542717120000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 71.0
+    },
+    {
+      "unixtime": 1542713760000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 64.0
+    },
+    {
+      "unixtime": 1542710400000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 69.0
+    },
+    {
+      "unixtime": 1542707040000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 67.0
+    },
+    {
+      "unixtime": 1542703680000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 71.0
+    },
+    {
+      "unixtime": 1542700320000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 66.0
+    },
+    {
+      "unixtime": 1542696960000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 93.0
+    },
+    {
+      "unixtime": 1542693600000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 69.0
+    },
+    {
+      "unixtime": 1542690240000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 72.0
+    },
+    {
+      "unixtime": 1542686880000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 79.0
+    },
+    {
+      "unixtime": 1542683520000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 79.0
+    },
+    {
+      "unixtime": 1542680160000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 87.0
+    },
+    {
+      "unixtime": 1542676800000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 77.0
+    },
+    {
+      "unixtime": 1542673440000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 72.0
+    },
+    {
+      "unixtime": 1542670080000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 73.0
+    },
+    {
+      "unixtime": 1542666720000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 66.0
+    },
+    {
+      "unixtime": 1542663360000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 74.0
+    },
+    {
+      "unixtime": 1542660000000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 71.0
+    },
+    {
+      "unixtime": 1542656640000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 67.0
+    },
+    {
+      "unixtime": 1542653280000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 86.0
+    },
+    {
+      "unixtime": 1542649920000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 84.0
+    },
+    {
+      "unixtime": 1542646560000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 71.0
+    },
+    {
+      "unixtime": 1542643200000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 76.0
+    },
+    {
+      "unixtime": 1542639840000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 84.0
+    },
+    {
+      "unixtime": 1542636480000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 95.0
+    },
+    {
+      "unixtime": 1542633120000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 94.0
+    },
+    {
+      "unixtime": 1542629760000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 75.0
+    },
+    {
+      "unixtime": 1542626400000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 111.0
+    },
+    {
+      "unixtime": 1542623040000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 104.0
+    },
+    {
+      "unixtime": 1542619680000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 86.0
+    },
+    {
+      "unixtime": 1542616320000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 68.0
+    },
+    {
+      "unixtime": 1542612960000,
+      "Core-2": 0.0,
+      "Core-3": 0.0,
+      "Core-0": 0.0,
+      "Core-1": 0.0,
+      "Memory": 29.0,
+      "Sessions": 95.0
+    }
+  ]
+}

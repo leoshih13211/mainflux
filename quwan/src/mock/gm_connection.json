@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": 1,
+      "place": "Xizhi",
+      "targets": [
+        {"id":2, "status": 1},
+        {"id":3, "status": 0}
+      ],
+      "coordinate": {
+        "lat": 25.0599030,
+        "lng": 121.6369863
+      },
+      "desc": "This is Xizhi, CO."
+    },
+    {
+      "id": 2,
+      "place": "Xinsheng",
+      "targets": [{"id":3, "status": 2}],
+      "coordinate": {
+        "lat": 25.0405318,
+        "lng": 121.5302981
+      },
+      "desc": "This is Xinsheng, CO."
+    },
+    {
+      "id": 3,
+      "place": "Hsinchu",
+      "targets": [],
+      "coordinate": {
+        "lat": 24.797848,
+        "lng": 121.0025818
+      },
+      "desc": "This is Hsinchu, CO."
+    }  
+  ]
+}

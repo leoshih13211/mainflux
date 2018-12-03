@@ -1,27 +1,39 @@
 <template>
-  <div class="d-flex">
-    <div class="d-flex flex-wrap align-content-start siteStats">
+  <div class="Site_Overview">
+    <div class="sysStats">
+      <div class="qBlock">
+        <div class="wanStatus">
+          <h4 class="title">Online WAN Port</h4>
+          <div class="stats" @click="redirectDevicePage">
+            <span class="online">{{ wanPortStat.online }}</span>
+            <sub class="total">/{{ wanPortStat.total }}</sub>
+          </div>
+        </div>
+      </div>
+      <div class="qBlock">
+        <div class="wanStatus">
+          <h4 class="title">Online LAN Port</h4>
+          <div class="stats" @click="redirectDevicePage">
+            <span class="online">{{ lanPortStat.online }}</span>
+            <sub class="total">/{{ lanPortStat.total }}</sub>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="siteStats">
       <div v-if="showThroughput" class="throughput qBlock">
         <AreaChart
-          :area-chart-data="throughputCfg"
-          :datasets="throughputData"
+          :area-chart-cfg="throughputCfg"
+          :update-time="throughputUpdateTime"
           :style="areaChartStyle"/>
       </div>
       <div v-if="showUsage" class="resPie usage qBlock">
-        <Pie id="pieApp" :pie-data="usageCfg" :style="pieChartStyle"/>
+        <Pie id="pieApp" :pie-cfg="usageCfg" :style="pieChartStyle"/>
       </div>
     </div>
     <section class="branchInfo">
       <div class="siteMap qBlock">
-        <Map :cfg="mapData"/>
-      </div>
-      <div class="qBlock">
-        <div class="wanStatus">
-          <div class="title">WAN Status</div>
-          <div class="stats">
-            <TableRes :table-data="devicesCfg"/>
-          </div>
-        </div>
+        <Map v-if="showMap" :cfg="mapData"/>
       </div>
     </section>
   </div>
@@ -34,8 +46,9 @@ import { palette } from 'common/utilities';
 import TableRes from 'components/Table/TableRes.vue';
 import Pie from 'components/Charts/Pie.vue';
 import AreaChart from 'components/Charts/AreaChart.vue';
-import Map from 'components/Map.vue';
-import mockDevices from '@/../mock/mock_devices.json';
+import Map from 'components/Map/Map.vue';
+import mockPorts from 'mock/nebula/Port.json';
+import mockSite from 'mock/nebula/Site.json';
 
 export default {
   components: {
@@ -46,29 +59,23 @@ export default {
   },
   data() {
     return {
-      devicesCfg: {
-        caption: 'Device Info',
+      wanPortCfg: {
         heads: [
-          { id: 'name', name: 'Interface Name' },
-          { id: 'status', name: 'Connection Status', spCell: 'CnntStatus' },
-          // { id: 'macAddress', name: 'MAC Address' },
-          // { id: 'method', name: 'Method' },
-          // { id: 'routeMode', name: 'Rooute Mode' },
-          // { id: 'priority', name: 'priority' },
+          { id: 'zone', name: 'Port Name' },
+          { id: 'enable', name: 'Status', spCell: 'PortEnable' },
+        ],
+        body: [],
+      },
+      lanPortCfg: {
+        heads: [
+          { id: 'port', name: 'Port Name' },
+          { id: 'enable', name: 'Status', spCell: 'PortEnable' },
         ],
         body: [],
       },
       mapData: {
-        markerGroup: [
-          [
-            {
-              pos: [25.0599030, 121.6369863],
-              popupText: 'This is Xizhi, CO.',
-            },
-          ],
-        ],
-        fitMap: 'marker', // default marker
-        showController: false,
+        type: 'FeatureCollection',
+        features: [],
       },
       usageCfg: {
         datasets: [],
@@ -82,6 +89,11 @@ export default {
           cutoutPercentage: 50,
           legend: {
             position: 'right',
+            fullWidth: false,
+            labels: {
+              fontSize: 12,
+              boxWidth: 20,
+            },
           },
           tooltips: {
             callbacks: {
@@ -123,11 +135,15 @@ export default {
         [this.randomData()],
         [this.randomData()],
       ],
+      throughputUpdateTime: 0,
       pieTooltipVal: '',
       timer: null,
     };
   },
   computed: {
+    showMap() {
+      return this.mapData.features.length;
+    },
     showUsage() {
       return !!this.usageCfg.datasets.length;
     },
@@ -137,15 +153,31 @@ export default {
     areaChartStyle() {
       return {
         position: 'relative',
-        width: '50vw',
-        height: '30vh',
+        width: '100%',
+        height: '70%',
       };
     },
     pieChartStyle() {
       return {
         position: 'relative',
-        width: '50vw',
-        height: '30vh',
+        width: '100%',
+        height: '80%',
+      };
+    },
+    wanPortStat() {
+      const total = mockPorts.wanSetting.length;
+      const online = mockPorts.wanSetting.filter(p => p.enable).length;
+      return {
+        online,
+        total,
+      };
+    },
+    lanPortStat() {
+      const total = mockPorts.lanSetting.length;
+      const online = mockPorts.lanSetting.filter(p => p.enable).length;
+      return {
+        online,
+        total,
       };
     },
   },
@@ -162,9 +194,25 @@ export default {
       'setNav',
     ]),
     setData() {
+      this.setMapData();
       this.setThroughput();
       this.setUsage();
       this.setDevices();
+    },
+    setMapData() {
+      const [lat, lng] = mockSite.location.split(',')
+        .map(d => Number(d.trim()));
+      const feature = {
+        id: this.mapData.features.length + 1,
+        place: mockSite.siteName,
+        targets: [],
+        coordinate: {
+          lat,
+          lng,
+        },
+        desc: mockSite.description,
+      };
+      this.mapData.features.push(feature);
     },
     setThroughput() {
       const txColor = 'orange';
@@ -192,7 +240,9 @@ export default {
         this.throughputData[0].push(this.randomData());
         this.throughputData[1].push(this.randomData());
         this.throughputCfg.datasets = datasets;
+        this.throughputUpdateTime = new Date().getTime();
       }, 5000);
+      this.throughputUpdateTime = new Date().getTime();
     },
     setUsage() {
       let labels = ['LINE', 'Facebook', 'Yahoo', 'YouTube', 'VPN', 'WAN', 'Others'];
@@ -215,7 +265,8 @@ export default {
       this.usageCfg.datasets = datasets;
     },
     setDevices() {
-      this.devicesCfg.body = mockDevices;
+      this.wanPortCfg.body = mockPorts.wanSetting.filter(p => p.enable);
+      this.lanPortCfg.body = mockPorts.lanSetting.filter(p => p.enable);
     },
     pieTooltipCb(tooltipItem, data) {
       const datasetIndex = tooltipItem.datasetIndex || 0;
@@ -243,24 +294,67 @@ export default {
         y: randomNum,
       };
     },
+    redirectDevicePage() {
+      this.$router.push('/site/device');
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
+$text-color: color('black');
+
+.Site_Overview{
+  display: flex;
+  flex-wrap: wrap;
+  h4{
+    margin-bottom: 0px;
+  }
   .branchInfo{
-    height: 100%;
-    width: 30%;
+    width: 100%;
     .siteMap{
       border-radius: 3px;
       padding: 10px;
       width: 100%;
       height: 40vh;
+      max-height: 250px
+    }
+  }
+  .sysStats{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .qBlock{
+      &:not(:last-child){
+        margin-right: 20px;
+      }
+      .stats{
+        display: flex;
+        justify-content: center;
+        height: 100px;
+        align-items: baseline;
+        cursor: pointer;
+        .online{
+          text-decoration: underline;
+          font-size: 4rem;
+          color: theme-color('success');
+          margin-right: 5px;
+
+        }
+        .total{
+          font-size: 1.5rem;
+          color: lighten($text-color, 25%)
+        }
+        &:hover{
+          background: theme-color('background');
+        }
+      }
     }
   }
   .siteStats{
-    width: 70%;
-    margin: 0px 20px;
+    display: flex;
+    align-content: flex-start;
+    width: 100%;
     .wanStatus{
       width: 100%;
       .stats{
@@ -270,20 +364,24 @@ export default {
   }
   .title {
     padding: 1rem;
+    border-bottom: 1px solid color('light-gray');
+    color: lighten($text-color, 25%);
   }
   .resPie{
-    width: 100%;
+    width: 50%;
+    height: 40vh;
+    max-height: 250px;
     position: relative;
     display: inline-flex;
-    flex-wrap: wrap;
     align-items: center;
   }
   .throughput{
-    min-width: 600px;
-    width: 100%;
+    width: 50%;
+    max-height: 250px;
     height: 40vh;
+    margin-right: 20px;
     display: inline-flex;
-    flex-wrap: wrap;
     align-items: center;
   }
+}
 </style>

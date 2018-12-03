@@ -1,5 +1,5 @@
 <template>
-  <button :type="type" class="qButton" @click.stop="btnOnClick">
+  <button :type="type" class="qBtn" @click.stop="btnOnClick">
     <slot name="icon_front"/>
     <slot>
       <span class="btnName">{{ name }}</span>

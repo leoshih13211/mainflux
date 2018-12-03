@@ -1,7 +1,7 @@
-@mixin button_variant($bg-color, $border-color, $color: color("white")) {
+@mixin qbtn_variant($bg-color, $border-color, $color: color("white")) {
   background-color: $bg-color;
   border-color: lighten($color: $border-color, $amount: 50%);
-  color: $color;
+  color: #ffffff;
 
   &:hover{
     border-color: darken($color: $border-color, $amount: 10%);

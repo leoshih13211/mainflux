@@ -1,0 +1,26 @@
+[
+  {
+    "id": 3,
+    "addressPool": "10.0.0.0/8",
+    "netmask": "24",
+    "ipsecPolicy": {
+      "pfs": 2,
+      "auth": "SHA1",
+      "dhGroup": 2,
+      "encryption": "AES128"
+    },
+    "serviceClassParameters": {
+      "bjitter": 5,
+      "tjitter": 30,
+      "blatency": 150,
+      "rtjitter": 30,
+      "tlatency": 150,
+      "rtlatency": 150,
+      "bpacketLossRate": 1,
+      "tpacketLossRate": 1,
+      "rtpacketLossRate": 1
+    },
+    "corpId": 11,
+    "corpName": "Zyxel"
+  }
+]

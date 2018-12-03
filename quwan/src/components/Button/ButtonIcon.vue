@@ -1,10 +1,12 @@
 <template>
   <qButton :name="name" class="buttonIcon">
     <template slot="icon_front">
-      <img :src="frontIcon" class="iconFront">
+      <img v-if="frontImage" :src="frontImage" class="iconFront">
+      <font-awesome-icon v-if="frontFa" :icon="frontFa"/>
     </template>
     <template slot="icon_back">
-      <img v-if="backIcon" :src="backIconPath" class="iconBack">
+      <img v-if="backImage" :src="backImage" class="iconBack">
+      <font-awesome-icon v-if="backFa" :icon="backFa"/>
     </template>
   </qButton>
 </template>
@@ -21,27 +23,26 @@ export default {
       type: String,
       default: '',
     },
-    frontIcon: {
+    frontImage: {
       type: String,
       default: '',
     },
-    backIcon: {
+    backImage: {
+      type: String,
+      default: '',
+    },
+    frontFa: {
+      type: String,
+      default: '',
+    },
+    backFa: {
       type: String,
       default: '',
     },
   },
   data() {
     return {
-      assetsPath: '../../assets/',
     };
-  },
-  computed: {
-    frontIconPath() {
-      return this.assetsPath + this.frontIcon;
-    },
-    backIconPath() {
-      return this.assetsPath + this.backIcon;
-    },
   },
 };
 </script>

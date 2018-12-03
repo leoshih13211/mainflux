@@ -10,7 +10,7 @@ import _ChartProto from './_Chart_Proto';
 export default {
   extends: _ChartProto,
   props: {
-    pieData: {
+    pieCfg: {
       type: Object,
       default: () => ({}),
     },
@@ -39,10 +39,10 @@ export default {
     initCfg() {
       const config = cloneDeep(this.config);
       config.data = {
-        datasets: this.pieData.datasets,
-        labels: this.pieData.labels,
+        datasets: this.pieCfg.datasets,
+        labels: this.pieCfg.labels,
       };
-      config.options = this.pieData.options;
+      config.options = this.pieCfg.options;
 
       return config;
     },

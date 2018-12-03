@@ -1,0 +1,15 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": 1,
+      "place": "Xizhi",
+      "targets": [],
+      "coordinate": {
+        "lat": 25.0599030,
+        "lng": 121.6369863
+      },
+      "desc": "This is Xizhi, CO."
+    }
+  ]
+}

@@ -42,9 +42,9 @@ export default {
         { name: 'WorldMap', router: '/worldmap' },
         { name: 'Site Dashboard', router: '/site' },
         { name: 'eMap/Floor Plan', router: '/' },
-        { name: 'System Status', router: '/' },
-        { name: 'Static Route', router: '/' },
-        { name: 'Network Status', router: '/' },
+        { name: 'System Status', router: '/systemstatus' },
+        { name: 'Static Route', router: '/staticroute' },
+        { name: 'Network Status', router: '/networkstatus' },
         {
           name: 'Report',
           children: [
@@ -120,7 +120,7 @@ $theme-primary: theme-color('primary');
       &:after{
         content: '';
         width: 10px;
-        border-right: color('gray') solid 10px;
+        border-right: theme-color('background') solid 10px;
         height: 44px;
         display: inline-block;
         position: absolute;

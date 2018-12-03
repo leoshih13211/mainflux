@@ -1,0 +1,38 @@
+{
+  "labelName": [
+    "<span>Xinsheng</span>",
+    "<span>Hsinchu</span>"
+  ],
+  "markerGroup": [
+    [
+      {
+        "pos": [25.0599101, 121.6346364],
+        "popupText": "This is Xizhi, CO."
+      },
+      {
+        "pos": [25.0405318, 121.5302981],
+        "popupText": "This is Xinsheng, CO."
+      }
+    ],
+    [
+      {
+        "pos": [25.0599101, 121.6346364],
+        "popupText": "This is Xizhi, CO."
+      },
+      {
+        "pos": [24.797848, 121.0025818],
+        "popupText": "This is Hsinchu, CO."
+      }
+    ]
+  ],
+  "lineGroup": [
+    [
+      { "st": [25.0599101, 121.6346364], "dt": [25.0405318, 121.5302981], "status": "well" },
+    ],
+    [
+      { "st": [25.0599101, 121.6346364], "dt": [24.797848, 121.0025818], "status": "warning" },
+    ]
+  ],
+  "fitMap": "marker",
+  "showController": true
+}

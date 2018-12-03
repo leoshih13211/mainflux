@@ -36,6 +36,12 @@ const router = new Router({
               meta: { requireAuth: true },
             },
             {
+              path: 'service',
+              name: 'Service',
+              component: () => import(/* webpackChunkName: "dashboard" */ 'views/Sites/Service.vue'),
+              meta: { requireAuth: true },
+            },
+            {
               path: 'device',
               name: 'Device',
               component: () => import(/* webpackChunkName: "dashboard" */ 'views/Sites/Device.vue'),
@@ -48,12 +54,30 @@ const router = new Router({
               meta: { requireAuth: true },
             },
             {
-              path: 'eventlog',
-              name: 'EventLog',
-              component: () => import(/* webpackChunkName: "dashboard" */ 'views/Sites/EventLog.vue'),
+              path: 'deviceLog',
+              name: 'DeviceLog',
+              component: () => import(/* webpackChunkName: "dashboard" */ 'views/Sites/DeviceLog.vue'),
               meta: { requireAuth: true },
             },
           ],
+        },
+        {
+          path: '/systemstatus',
+          name: 'SystemStatus',
+          component: () => import(/* webpackChunkName: "dashboard" */ 'views/SystemStatus.vue'),
+          meta: { requireAuth: true },
+        },
+        {
+          path: '/staticroute',
+          name: 'StaticRoute',
+          component: () => import(/* webpackChunkName: "dashboard" */ 'views/StaticRoute.vue'),
+          meta: { requireAuth: true },
+        },
+        {
+          path: '/networkstatus',
+          name: 'NetworkStatus',
+          component: () => import(/* webpackChunkName: "dashboard" */ 'views/_Blank.vue'),
+          meta: { requireAuth: true },
         },
         {
           path: '/blank',

@@ -6,6 +6,7 @@
     :aria-placeholder="placeholder"
     :required="required"
     :name="type"
+    :readOnly="readOnly"
     v-model="userInput"
     :autocomplete="autocomplete ? 'on' : 'off'"
     @input.stop="onInput" >
@@ -15,7 +16,7 @@
 import { debounce } from 'lodash';
 
 export default {
-  name: 'VInput',
+  name: 'QInput',
   props: {
     type: {
       type: String,
@@ -23,11 +24,11 @@ export default {
     },
     placeholder: {
       type: String,
-      default: '',
+      default: 'Type something here...',
     },
     valid: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     required: {
       type: Boolean,
@@ -36,6 +37,14 @@ export default {
     autocomplete: {
       type: Boolean,
       default: false,
+    },
+    readOnly: {
+      type: Boolean,
+      default: false,
+    },
+    defaultValue: {
+      type: String,
+      default: '',
     },
   },
   data() {
@@ -47,8 +56,13 @@ export default {
     inputClass() {
       return {
         invalid: !this.valid,
+        readOnly: this.readOnly,
       };
     },
+  },
+  mounted() {
+    console.log(this.defaultValue);
+    if (this.defaultValue !== '') this.userInput = this.defaultValue;
   },
   methods: {
     onInput: debounce(function () {
@@ -58,5 +72,3 @@ export default {
   },
 };
 </script>
-
-<style scoped lang="scss" />

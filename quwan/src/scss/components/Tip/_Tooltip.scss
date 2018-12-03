@@ -1,0 +1,78 @@
+
+$popper_color: color('gray');
+$arrow_size: .5rem;
+
+%arrowBody{
+  content: '';
+  display: inline-block;
+  width: calc(#{$arrow_size});
+  height: $arrow_size;
+  position: absolute;
+}
+
+.qTooltip{
+  display: inline-block;
+  cursor: pointer;
+  .qPopper{
+    background-color: $popper_color;
+    color: color('white');
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    z-index: 2;
+    max-width: 200px;
+    font-size: .8rem;
+    margin: .5rem;
+    // &.top{
+    //   margin-bottom: 10px;
+    //   &::after{
+    //     @extend %arrowBody;
+    //     width: calc(#{$arrow_size}*2);
+    //     border-top: $arrow_size solid $popper_color;
+    //     border-right: calc(#{$arrow_size}) solid transparent;
+    //     border-left: calc(#{$arrow_size}) solid transparent;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     bottom: calc(-#{$arrow_size});
+    //   }
+    // }
+    // &.bottom{
+    //   margin-top: 10px;
+    //   &::before{
+    //     @extend %arrowBody;
+    //     width: calc(#{$arrow_size}*2);
+    //     border-bottom: $arrow_size solid $popper_color;
+    //     border-right: calc(#{$arrow_size}) solid transparent;
+    //     border-left: calc(#{$arrow_size}) solid transparent;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     top: calc(-#{$arrow_size});
+    //   }
+    // }
+    // &.left{
+    //   margin-right: 10px;
+    //   &::before{
+    //     @extend %arrowBody;
+    //     height: calc(#{$arrow_size}*2);
+    //     border-left: $arrow_size solid $popper_color;
+    //     border-top: calc(#{$arrow_size}) solid transparent;
+    //     border-bottom: calc(#{$arrow_size}) solid transparent;
+    //     top: 50%;
+    //     transform: translateY(-50%);
+    //     right: calc(-#{$arrow_size});
+    //   }
+    // }
+    // &.right{
+    //   margin-left: 10px;
+    //   &::before{
+    //     @extend %arrowBody;
+    //     height: calc(#{$arrow_size}*2);
+    //     border-right: $arrow_size solid $popper_color;
+    //     border-top: calc(#{$arrow_size}) solid transparent;
+    //     border-bottom: calc(#{$arrow_size}) solid transparent;
+    //     top: 50%;
+    //     transform: translateY(-50%);
+    //     left: calc(-#{$arrow_size});
+    //   }
+    // }
+  }
+}

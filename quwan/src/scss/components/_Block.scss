@@ -1,3 +1,5 @@
+$text-color: color('black');
+
 %shadow{
   box-shadow:
   0 2px 2px 0 rgba(0,0,0,0.14),
@@ -10,8 +12,14 @@
 }
 
 .qBlock{
+  width: 100%;
   background-color: color('white');
   border-radius: 3px;
   margin-bottom: 15px;
   @extend %shadow;
+  color: lighten($text-color, 25%);
+  .title{
+    // padding: 1rem;
+    font-size: 1.3rem;
+  }
 }

@@ -18,7 +18,7 @@
       </div>
       <div class="btnLayout">
         <qButton name="Login" @click.native="goLogin"/>
-        <qButton type="submit" class="qButton-primary" name="Submit" />
+        <qButton type="submit" class="qBtn-primary" name="Submit" />
       </div>
     </form>
   </div>

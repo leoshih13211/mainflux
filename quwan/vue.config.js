@@ -10,6 +10,7 @@ module.exports = {
   chainWebpack: (config) => {
     config.resolve.alias
       .set('@', resolve('src'))
+      .set('mock', resolve('src/mock'))
       .set('services', resolve('src/services'))
       .set('assets', resolve('src/assets'))
       .set('components', resolve('src/components'))

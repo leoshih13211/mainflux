@@ -1,9 +1,9 @@
 <template>
-  <div class="qTable qShadow">
+  <div class="qTable">
     <div class=" table-responsive-xl">
       <table class="table">
         <Tablehead :data="tableData.heads"/>
-        <TableBody :data="tableData.body" :heads="tableData.heads"/>
+        <TableBody :data="tableData.body" :heads="tableData.heads" @spCellEmit="spCellEmit"/>
       </table>
     </div>
   </div>
@@ -22,6 +22,11 @@ export default {
     tableData: {
       type: Object,
       default: () => ({}),
+    },
+  },
+  methods: {
+    spCellEmit(payload) {
+      this.$emit('spCellEmit', payload);
     },
   },
 };

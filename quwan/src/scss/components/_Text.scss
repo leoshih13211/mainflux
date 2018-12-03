@@ -3,3 +3,9 @@
     color: #{$color};
   }
 }
+
+@each $name, $color in $colors {
+  .qText-#{$name} {
+    color: #{$color};
+  }
+}

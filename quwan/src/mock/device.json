@@ -34,5 +34,23 @@
     "method": "PPP",
     "routeMode": "NAT",
     "priority": "Backup"
+  },
+  {
+    "id": 5,
+    "status": 1,
+    "name": "LAN1",
+    "macAddress": "none",
+    "method": "PPP",
+    "routeMode": "NAT",
+    "priority": "Always"
+  },
+  {
+    "id": 6,
+    "status": 1,
+    "name": "LAN2",
+    "macAddress": "none",
+    "method": "PPP",
+    "routeMode": "NAT",
+    "priority": "Backup"
   }
 ]

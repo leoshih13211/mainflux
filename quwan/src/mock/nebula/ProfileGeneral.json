@@ -1,0 +1,29 @@
+{
+  "id": 3,
+  "corpZones": [
+    {
+      "zoneId": 7,
+      "zoneName": "Employee",
+      "vlanId": 1
+    },
+    {
+      "zoneId": 129,
+      "zoneName": "Admin",
+      "vlanId": 123
+    }
+  ],
+  "guestZones": [
+    {
+      "zoneId": 9,
+      "zoneName": "Guest",
+      "vlanId": 64
+    }
+  ],
+  "updateSetting": {
+    "autoUpgrade": false,
+    "upgradeDate": "Monday",
+    "upgradeEndTime": "00:00",
+    "upgradeStartTime": "00:00"
+  },
+  "profileId": 3
+}

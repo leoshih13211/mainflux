@@ -11,10 +11,11 @@
 </template>
 
 <script>
-import Map from 'components/Map.vue';
+import Map from 'components/Map/Map.vue';
 import Topology from 'components/Topology.vue';
 import { mapActions } from 'vuex';
 import ButtonToggle from 'components/Button/ButtonToggle.vue';
+import mock_cnntData from 'mock/gm_connection.json';
 
 export default {
   components: {
@@ -24,67 +25,7 @@ export default {
   },
   data() {
     return {
-      mapData: {
-        labelName: [
-          '<span>Xinsheng</span>',
-          '<span>Hsinchu</span>',
-          // `
-          //   <b>IEI</b>
-          //   <ul>
-          //     <li>Africa</li>
-          //     <li>South America</li>
-          //   </ul>`,
-          // `<b>QNAP</b>
-          //   <ul>
-          //     <li>Taipei</li>
-          //     <li>Shanghai</li>
-          //     <li>LA</li>
-          //   </ul>`,
-        ],
-        markerGroup: [
-          [
-            {
-              pos: [25.0599101, 121.6346364],
-              popupText: 'This is Xizhi, CO.',
-            },
-            {
-              pos: [25.0405318, 121.5302981],
-              popupText: 'This is Xinsheng, CO.',
-            },
-          ],
-          [
-            {
-              pos: [25.0599101, 121.6346364],
-              popupText: 'This is Xizhi, CO.',
-            },
-            {
-              pos: [24.797848, 121.0025818],
-              popupText: 'This is Hsinchu, CO.',
-            },
-            // {
-            //   pos: [16.024273, 11.953125],
-            //   popupText: 'This is Africa, CO.',
-            // },
-            // {
-            //   pos: [-14.577273, -53.367183],
-            //   popupText: 'This is South America, CO.',
-            // },
-          ],
-        ],
-        lineGroup: [
-          // default status is 'well'
-          [
-            { st: [25.0599101, 121.6346364], dt: [25.0405318, 121.5302981], status: 'well' },
-            // { st: [25.0599101, 121.6346364], dt: [33.613203, -118.212888], status: 'warning' },
-          ],
-          [
-            { st: [25.0599101, 121.6346364], dt: [24.797848, 121.0025818], status: 'warning' },
-            // { st: [16.024273, 11.953125], dt: [-14.577273, -53.367183], status: 'well' },
-          ],
-        ],
-        fitMap: 'marker', // default marker
-        showController: true,
-      },
+      mapData: mock_cnntData,
       toggleMenu: [
         { name: 'Map', active: true },
         { name: 'Topology', active: true },

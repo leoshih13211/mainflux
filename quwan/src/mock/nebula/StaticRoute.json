@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "static_0",
+    "siteId": 12,
+    "subnet": "10.1.0.0/24",
+    "nextHop": "1.1.1.1",
+    "nextHopType": "ip",
+    "ip": "1.1.1.1",
+    "metric": 0,
+    "description": "d1",
+    "joinAutoVPN": true
+  },
+  {
+    "id": 2,
+    "name": "static_1",
+    "siteId": 12,
+    "subnet": "10.2.0.0/24",
+    "nextHop": "WAN1",
+    "nextHopType": "wan",
+    "ip": "",
+    "metric": 1,
+    "description": "d2",
+    "joinAutoVPN": false
+  },
+  {
+    "id": 3,
+    "name": "static_2",
+    "siteId": 12,
+    "subnet": "10.3.0.0/24",
+    "nextHop": "WAN2",
+    "nextHopType": "wan",
+    "ip": "",
+    "metric": 2,
+    "description": "d3",
+    "joinAutoVPN": false
+  },
+  {
+    "id": 4,
+    "name": "static_3",
+    "siteId": 12,
+    "subnet": "10.4.0.0/24",
+    "nextHop": "7",
+    "nextHopType": "lan",
+    "ip": "",
+    "metric": 3,
+    "description": "d4",
+    "joinAutoVPN": false
+  },
+  {
+    "id": 5,
+    "name": "static_4",
+    "siteId": 12,
+    "subnet": "10.5.0.0/24",
+    "nextHop": "9",
+    "nextHopType": "lan",
+    "ip": "",
+    "metric": 40,
+    "description": "d5",
+    "joinAutoVPN": false
+  }
+]

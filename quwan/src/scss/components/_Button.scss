@@ -6,7 +6,7 @@ $btn-active-bg: #f4f4f4;
 $btn-active-border: color("dark-gray");
 $btn-disabled-color: color("light-gray");
 
-.qButton{
+.qBtn{
   width: 100%;
   height: 5vh;
   min-width: 100px;
@@ -37,19 +37,22 @@ $btn-disabled-color: color("light-gray");
     border-color: $btn-active-border;
     background-color: $btn-active-bg;
   }
+  &:focus{
+    box-shadow: none;
+  }
   &[disabled]{
     color: $btn-disabled-color;
   }
 }
 
 @each $name, $color in $theme-colors {
-  .qButton-#{$name} {
-    @include button_variant($color, $color)
+  .qBtn-#{$name} {
+    @include qbtn_variant($color, $color)
   }
 }
 
 @each $name, $color in $colors {
-  .qButton-#{$name} {
-    @include button_variant($color, $color)
+  .qBtn-#{$name} {
+    @include qbtn_variant($color, $color)
   }
 }
